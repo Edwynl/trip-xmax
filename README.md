@@ -9,9 +9,13 @@
 
 ## 怎么看
 
-直接打开 `index.html` 就能看，图片在 `assets/` 里，离线也能打开。
+直接打开 `index.html` 就能看；图片以 base64 文本存在 `assets_b64/` 里，页面滚动到哪张图就加载哪张，GitHub Pages 上可正常显示。
 
 在线版用 GitHub Pages：https://edwynl.github.io/trip-xmax/
+
+## 为什么图片是 .b64 文本文件
+
+GitHub 的推送工具只接受 UTF-8 文本文件，不能直接推 JPG/WebP 二进制，所以图片先转成 base64 文本（`assets_b64/*.b64`，解码后和原图完全一致），`index.html` 里用一小段脚本在图片进入视口时取回还原。`.nojekyll` 是为了让 GitHub Pages 原样提供所有文件，不经过 Jekyll 处理。
 
 ## 部署说明
 
