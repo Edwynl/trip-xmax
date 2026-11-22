@@ -1,0 +1,1758 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>杭州 + 澳门 + 东京 + 香港行程 · 2026年12月5–20日</title>
+<style>
+  :root{
+    --bg:#f7f5f0; --surface:#ffffff; --surface2:#efece4; --ink:#1d2733; --ink2:#4c5a68;
+    --line:#ddd6c8; --accent:#b03a2e; --accent-ink:#ffffff; --fuji:#2e5f8a; --gold:#a87b1f;
+    --yamanote:#80c241; --marunouchi:#e60012; --yurakucho:#c1a470; --fukutoshin:#9c5e31;
+    --ginza:#ff9500; --asakusa:#ec6e65; --oedo:#b6007a; --jr:#3a7d2c;
+    --chip:#eef3e8; --warn-bg:#fdf3e3; --warn-line:#e3c07a;
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14181d; --surface:#1e242c; --surface2:#262e38; --ink:#eef1f4; --ink2:#aeb9c4;
+      --line:#39434e; --accent:#e0685c; --accent-ink:#16100f; --fuji:#7fb0dd; --gold:#d9ab4a;
+      --chip:#26313a; --warn-bg:#2e2a1e; --warn-line:#7a6535;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+    line-height:1.65;font-size:16px}
+  button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]){min-height:2rem}
+  a{color:var(--fuji)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 16px 64px}
+  /* hero */
+  .hero{position:relative;margin:0 -16px;border-radius:0 0 18px 18px;overflow:hidden}
+  .hero img{width:100%;height:340px;object-fit:cover;display:block}
+  .hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,28,.18),rgba(10,18,28,.78))}
+  .hero .txt{position:absolute;left:20px;right:20px;bottom:18px;color:#fff}
+  .hero h1{margin:0 0 4px;font-size:32px;line-height:1.25;letter-spacing:.02em}
+  .hero p{margin:2px 0;color:#e8edf2;font-size:15px}
+  .hero .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .badges span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.45);
+    padding:4px 10px;border-radius:999px;font-size:13px;color:#fff}
+  /* nav */
+  nav.toc{position:sticky;top:0;z-index:20;background:var(--bg);padding:10px 0 6px;
+    display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+  nav.toc::-webkit-scrollbar{display:none}
+  nav.toc a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--surface);
+    border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;min-height:36px;
+    display:inline-flex;align-items:center;transition:background .18s ease,color .18s ease,border-color .18s ease}
+  nav.toc a.hot{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700}
+  section{margin-top:38px;scroll-margin-top:64px}
+  .dayhead{scroll-margin-top:72px}
+  .fig .swipe{margin:0 0 8px;font-size:13.5px;font-weight:700;color:var(--fuji)}
+  .fig.hkmap svg{min-width:820px}
+  .fig.hzmap svg{min-width:860px}
+  h2{font-size:24px;margin:0 0 6px;line-height:1.35}
+  h2 .no{color:var(--accent);margin-right:8px}
+  h3{font-size:19px;margin:22px 0 8px}
+  .sub{color:var(--ink2);margin:0 0 14px;font-size:15px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:12px 0}
+  .grid{display:grid;grid-template-columns:1fr;gap:12px}
+  @media(min-width:760px){.grid.two{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:1fr 1fr 1fr}}
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  th,td{border-bottom:1px solid var(--line);padding:8px 8px;text-align:left;vertical-align:top}
+  th{color:var(--ink2);font-weight:600;white-space:nowrap}
+  .tag{display:inline-block;background:var(--chip);border-radius:6px;padding:1px 8px;font-size:12.5px;margin-right:6px;color:var(--ink)}
+  .tag.red{background:var(--accent);color:var(--accent-ink)}
+  .tag.blue{background:var(--fuji);color:#fff}
+  .warn{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:15px}
+  .fig{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px;margin:12px 0;overflow-x:auto}
+  .fig svg{display:block;min-width:640px;width:100%;height:auto}
+  .figcap{font-size:13.5px;color:var(--ink2);margin-top:8px}
+  /* route strip diagrams */
+  .route{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;margin:10px 0}
+  .node{background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:8px 12px;
+    font-weight:600;font-size:14.5px;display:flex;flex-direction:column;justify-content:center;max-width:210px}
+  .node small{font-weight:400;color:var(--ink2);font-size:12.5px}
+  .node.start{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .node.start small{color:var(--accent-ink);opacity:.85}
+  .leg{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4px 8px;min-width:118px;flex:1 1 118px}
+  .leg .ln{font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;text-align:center}
+  .leg .dt{font-size:12.5px;color:var(--ink2);text-align:center}
+  .leg .arw{color:var(--ink2);font-size:15px;line-height:1}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex:0 0 auto}
+  .dayhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-top:26px}
+  .dayhead h3{margin:0}
+  .dayhead .d{color:var(--accent);font-weight:700}
+  .kv{display:grid;grid-template-columns:86px 1fr;gap:4px 10px;font-size:14.5px;margin:6px 0}
+  .kv dt{color:var(--ink2);font-weight:600}
+  .kv dd{margin:0}
+  .spot{border-top:1px solid var(--line);padding:12px 0}
+  .spot:first-of-type{border-top:none}
+  .spot h4{margin:0 0 4px;font-size:16.5px}
+  .spot h4 .n{color:var(--accent);margin-right:6px}
+  .photo{width:100%;height:220px;object-fit:cover;border-radius:var(--radius);display:block;margin:10px 0}
+  @media(min-width:760px){.photo{height:300px}}
+  .spotimg{width:100%;height:190px;object-fit:cover;border-radius:10px;display:block;margin:8px 0 10px}
+  @media(min-width:760px){.spotimg{height:230px}}
+  .mini{display:grid;grid-template-columns:1fr;gap:14px;margin:12px 0}
+  @media(min-width:760px){.mini{grid-template-columns:1fr 1fr 1fr}}
+  .mini figure{margin:0}
+  .mini img{width:100%;height:160px;object-fit:cover;border-radius:10px;display:block}
+  .mini figcaption{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.55}
+  .mini figcaption strong{color:var(--ink)}
+  .small{font-size:13.5px;color:var(--ink2)}
+  ul.tight{margin:6px 0;padding-left:20px}
+  ul.tight li{margin:3px 0}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13.5px;margin:8px 0}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  footer{margin-top:48px;color:var(--ink2);font-size:13.5px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <img src="assets/img-001.webp" alt="河口湖方向看富士山与忠灵塔" />
+    <div class="shade"></div>
+    <div class="txt">
+      <h1>杭州 + 澳门 + 东京 + 香港行程 · 12月5–20日</h1>
+      <p>Edwyn + 大莉 · 2人 · 5–6日杭州住万象城附近（钱江新城）· 11–17日 Tora Hotel Ikebukuro（池袋）· 17–19日酒店未定 · 19日晚香港木的地（佐敦）</p>
+      <div class="badges">
+        <span>杭州 5日下午到 · 6日西湖整天 · 7日飞深圳</span>
+        <span>东京全天 12–18日 · 共7天</span>
+        <span>富士山主选 14日 / 备选 16日</span>
+        <span>17日 镰仓 ⇄ 轻井泽 二选一</span>
+        <span>19日晚抵港 · 20日拍照后高铁回深圳</span>
+        <span>日程均为暂定 · 票未订</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="toc">
+    <a href="#overview" class="hot">全程总览</a>
+    <a href="#hangzhou">杭州 · 12月5–7日</a>
+    <a href="#macau">澳门 · 12月9–11日</a>
+    <a href="#metro">东京 ① 地铁线路图</a>
+    <a href="#hotelmap">东京 ② 酒店到车站图</a>
+    <a href="#days">东京 ③ 每日出行图</a>
+    <a href="#fuji">富士山16机位</a>
+    <a href="#snow">17日看雪之选</a>
+    <a href="#spots">东京机位卡</a>
+    <a href="#museums">美术馆·按区域选</a>
+    <a href="#shopping">购物推荐·给大莉</a>
+    <a href="#practical">交通·支付·门票</a>
+    <a href="#hongkong">香港 · 12月19–20日 + 回深圳</a>
+  </nav>
+
+  <section id="overview">
+    <h2><span class="no">总览</span>这一趟的全程</h2>
+    <p class="sub">杭州是第一段，东京是中间一段，香港是收尾一段。前后段已订的航班、澳门住宿、东京住宿和选定的香港住宿如下；杭州住万象城附近（钱江新城），酒店是出发前自己选好的，这里不写名字。</p>
+    <div class="card">
+      <table>
+        <tr><th>12月5日（六）</th><td><strong>JD386 墨尔本 08:00 → 杭州萧山 15:45</strong>。落地后去<strong>万象城附近（钱江新城）</strong>酒店入住，杭州住 5–6 日共 2 晚；晚上钱江新城灯光秀 + 湖滨西湖夜景，详见下方「杭州」章。</td></tr>
+        <tr><th>12月6日（日）</th><td><strong>杭州整天：</strong>灵隐寺 → 断桥 / 白堤 / 孤山 → 龙井村 → 雷峰塔日落 → 回万象城，详见下方「杭州」章。</td></tr>
+        <tr><th>12月7日（一）</th><td><strong>深圳航空 ZH9884 杭州萧山 12:05 → 深圳 14:15</strong>，09:15–09:30 从酒店出发去机场。深圳住 7–9 日。</td></tr>
+        <tr><th>12月9–11日</th><td><strong>澳门住 2 晚：YOHO荷里活罗斯福酒店（YOHO Hollywood Roosevelt Hotel），氹仔</strong>。12月9日 15:00 后入住，12月11日 11:00 前退房。高级金光景大床客房，1 间房 2 人，不含早餐。详见下方「澳门 · YOHO酒店」及澳门每日行程。</td></tr>
+        <tr><th>12月11日（五）</th><td><strong>早上打车去澳门机场</strong>，<strong>Air Macau NX862 澳门 09:30 → 成田 14:30</strong>。落成田 T2，Skyliner + 山手线到池袋入住（详见每日出行图）。行李：每人手提 7kg + 托运 32kg。</td></tr>
+        <tr><th>12月11–17日</th><td><strong>Tora Hotel Ikebukuro — Comfortable Apartment，40㎡，1 房 2 人，6 晚</strong><br>地址：3-41-3 Ikebukuro, Toshima City, Tokyo。12月11日入住，12月17日退房。</td></tr>
+        <tr><th>12月17–19日</th><td><strong>酒店未定，共 2 晚</strong>（17–18、18–19）。正在考虑塔景房：Fairmont Tokyo / Prince Park Tower Tokyo 的 Tower View 房型是比价候选，没订。</td></tr>
+        <tr><th>12月19日（六）</th><td><strong>Jetstar Japan GK027 成田 T3 19:30 → 香港 23:45</strong>。行李：每人托运 20kg，手提行李 + 个人物品合计 7kg。落地后打车去<strong>香港木的地酒店（佐敦）</strong>住 1 晚，详见下方「香港」章。</td></tr>
+        <tr><th>12月20日（日）</th><td><strong>香港拍照日 + 晚上回深圳：</strong>白天在佐敦–尖沙咀–西九一带拍照，晚上从<strong>香港西九龙站坐高铁去深圳福田</strong>（14 分钟，HK$75）。详见下方「香港」章。</td></tr>
+        <tr><th>12月27日（日）</th><td>JD385 杭州 16:15 → 墨尔本 06:00+1，全程结束。</td></tr>
+      </table>
+    </div>
+    <div class="grid two">
+      <div class="card">
+        <h3 style="margin-top:0">同行与证件</h3>
+        <ul class="tight">
+          <li><strong>大莉</strong> 同行东京段，持中国护照/旅行证件：去日本要<strong>提前办日本旅游签证</strong>，经指定旅行社送签，正常约 5 个工作日，约 715 元——出发前这一周就要办。</li>
+          <li>回程经香港：她还需要<strong>香港签注</strong>（单次，15 元，自助机即时办）——东京出发前确认办好。</li>
+          <li>Edwyn 持澳洲护照：日本免签 90 天、中国免签 30 天（政策以出发前复查为准）。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">东京 7 天怎么排（暂定）</h3>
+        <ul class="tight">
+          <li>定调：<strong>经典地标 + 吃喝购物 + 动漫科技</strong>混合，不是只看地标。</li>
+          <li>只有两个日子有硬约束：<strong>富士山看天气</strong>（14 主选 / 16 备选，11–12 日定）、<strong>17 日镰仓与轻井泽二选一</strong>。</li>
+          <li>其余日程都是初版暂定、未选定、票没订，可以按天气和体力对调。</li>
+          <li>未定事项：迪士尼海洋保不保留；teamLab 选 Planets 还是 Borderless；富士日与镰仓日是否对调。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="hangzhou">
+    <h2><span class="no">杭州</span>落地杭州两天 · 12月5–7日 · 住万象城附近（钱江新城）</h2>
+    <p class="sub">全程第一段：5 日下午落地萧山，住钱江新城万象城附近；6 日一整天给西湖，动线是西边进、东边出——灵隐寺 → 断桥一线 → 龙井 → 雷峰塔看日落，最后回万象城；7 日中午飞深圳。酒店名字不写，只按「万象城附近」这个基地排交通。</p>
+
+    <div class="card">
+      <h3 style="margin-top:0">基地与总交通（先记这几条）</h3>
+      <dl class="kv">
+        <dt>住</dt><dd><strong>万象城附近（钱江新城）</strong>，地铁 2 / 4 号线钱江路站一带。这一片是杭州的新 CBD：钱塘江边、市民中心、来福士和万象城都在步行圈，晚上看灯光秀不用出远门。</dd>
+        <dt>机场→酒店</dt><dd><strong>地铁 19 号线</strong>萧山机场站直达，耕文路站下车步行到万象城一带，约 50–60 分钟、约 ¥9–10；<strong>打车</strong>约 23 公里、40–55 分钟、约 ¥70–90（晚高峰走机场高速可能更久）。带行李又刚下长途飞机，打车更省力；不堵车时两者时间接近。</dd>
+        <dt>酒店→西湖</dt><dd>地铁 4 号线钱江路 → 水澄桥方向不对，去湖滨要往市中心走：4 号线到<strong>钱江路换乘或直达城站/近江一带再转 1 号线到龙翔桥（湖滨）</strong>，全程约 25–30 分钟；打车到湖滨约 6 公里、20–30 分钟。</dd>
+        <dt>酒店→灵隐</dt><dd>打车约 13 公里、35–50 分钟（周日早上越早越不堵）；地铁要换乘且下车还要接驳，不如打车直达灵隐。</dd>
+      </dl>
+    </div>
+
+    <div class="dayhead"><span class="d">12月5日 · 周六</span><h3>到达日：15:45 落地萧山 → 入住 → 钱江新城灯光 → 湖滨夜景</h3><span class="tag red">已订航班</span></div>
+    <div class="route">
+      <div class="node start">杭州萧山机场<small>JD386 · 15:45 落地</small></div>
+      <div class="leg"><span class="ln">🚇 地铁19号线 / 🚕 打车</span><span class="arw">→</span><span class="dt">出关拿行李约 16:30 出发 · 地铁约50–60分钟 / 打车约40–55分钟</span></div>
+      <div class="node">万象城附近酒店<small>约 17:30–18:00 到 · 入住放行李</small></div>
+      <div class="leg"><span class="ln">🚶 步行 + 🌃 灯光秀</span><span class="arw">→</span><span class="dt">酒店一带先吃晚饭 · 19:30 左右到钱塘江边 / 市民中心一带</span></div>
+      <div class="node">钱江新城灯光秀<small>江对岸楼群灯光 · 约19:30–20:30 一场</small></div>
+      <div class="leg"><span class="ln">🚇 地铁4号线→1号线 / 🚕 打车</span><span class="arw">→</span><span class="dt">去湖滨约25–30分钟 · 体力不够就只看灯光秀早点回酒店</span></div>
+      <div class="node">湖滨 / 西湖东岸<small>集贤亭夜景 · 远望雷峰塔亮灯</small></div>
+    </div>
+    <p class="small">第一晚的原则：刚飞完长途，只排酒店附近 + 一段夜景，不跑灵隐、不爬塔。灯光秀的具体场次时间以当天钱江新城公告为准，常见是晚间一场约 19:30 前后开始，先到江边占个正对楼群的位置；看完灯光秀还有体力再去湖滨，两个点不要反过来跑。</p>
+
+    <div class="dayhead"><span class="d">12月6日 · 周日</span><h3>西湖整天：灵隐寺 → 断桥 / 白堤 / 孤山 → 龙井村 → 雷峰塔日落</h3><span class="tag">整天步行 + 打车接驳</span></div>
+    <div class="route">
+      <div class="node start">万象城附近酒店<small>08:00 前出发</small></div>
+      <div class="leg"><span class="ln">🚕 打车</span><span class="arw">→</span><span class="dt">约13公里 · 35–50分钟 · 尽量 08:30 前到灵隐</span></div>
+      <div class="node">灵隐寺 + 飞来峰<small>约 08:30–11:00</small></div>
+      <div class="leg"><span class="ln">🚕 打车 / 🚌 公交</span><span class="arw">→</span><span class="dt">去北山街 / 断桥约20–30分钟 · 湖边吃午饭</span></div>
+      <div class="node">断桥 · 白堤 · 孤山<small>约 11:30–14:30 · 沿湖慢走</small></div>
+      <div class="leg"><span class="ln">🚕 打车</span><span class="arw">→</span><span class="dt">去龙井村约20分钟 · 下午茶园光线正好</span></div>
+      <div class="node">龙井村<small>约 15:00–16:15 · 喝茶拍照</small></div>
+      <div class="leg"><span class="ln">🚕 打车</span><span class="arw">→</span><span class="dt">去雷峰塔约10–15分钟 · 赶 17:00 前上塔</span></div>
+      <div class="node">雷峰塔<small>日落约 16:55 · 塔上看西湖全景</small></div>
+      <div class="leg"><span class="ln">🚕 打车 / 🚇 地铁</span><span class="arw">→</span><span class="dt">回万象城约30–40分钟 · 晚上酒店附近晚饭</span></div>
+      <div class="node">万象城附近酒店<small>约 19:00 到</small></div>
+    </div>
+    <p class="small">顺序不能反：灵隐必须放早上第一站（周日上午越晚人越多、进山路越堵）；雷峰塔必须放最后（日落和亮灯都在这一站收）。龙井和雷峰塔都在湖南边，打车一段段跳最顺，不要中途再回北岸。</p>
+
+    <div class="dayhead"><span class="d">12月7日 · 周一</span><h3>离开日：酒店 → 萧山机场 → 飞深圳</h3><span class="tag red">已订航班</span></div>
+    <div class="route">
+      <div class="node start">万象城附近酒店<small>09:15–09:30 出发</small></div>
+      <div class="leg"><span class="ln">🚇 地铁19号线 / 🚕 打车</span><span class="arw">→</span><span class="dt">地铁约50–60分钟 · 打车约40–55分钟（周一早高峰预留余量）</span></div>
+      <div class="node">杭州萧山机场<small>10:30–10:45 到 · 值机托运</small></div>
+      <div class="leg"><span class="ln">✈ 深圳航空 ZH9884</span><span class="arw">→</span><span class="dt">12:05 起飞 → 深圳 14:15（接深圳段）</span></div>
+      <div class="node">深圳<small>转入 7–9 日深圳行程</small></div>
+    </div>
+    <div class="warn"><strong>7 日早上只盯出发时间：</strong>12:05 的航班，值机一般提前 45 分钟截止。09:15–09:30 必须从酒店出门，早饭在酒店或机场解决，不要排任何西湖边的早晨行程——万象城到机场这一段周一早高峰打车可能慢，宁可早到机场等。</div>
+
+    <h3>杭州景点图鉴（图 · 介绍 · 机位 · 交通）</h3>
+    <p class="sub" style="margin-bottom:4px">这次会走到的 6 个点都在这里，按游览顺序排：先看图认地方，再看机位怎么拍，最后看从基地怎么过去。</p>
+    <div class="card" style="padding-top:4px;padding-bottom:4px">
+      <div class="spot"><h4><span class="n">01</span>钱江新城灯光秀</h4>
+        <img class="spotimg" src="assets/img-002.jpg" alt="钱塘江对岸看钱江新城楼群夜景灯光" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>新城天际线 · 住万象城的顺路夜景。</strong>钱塘江北岸的 CBD 楼群入夜后整片亮灯，金色的大金球（洲际酒店）和市民中心、来福士排成一线，灯光秀时楼面会动起来。住处就在这一片，5 日落地当晚步行/短途就能看，是全程成本最低的一场夜景。</dd>
+        <dt>站位/朝向</dt><dd>站在钱塘江边步道或市民中心一带，隔江朝楼群正面拍；想把江面倒影带上，就退到江堤栏杆边低角度拍。</dd>
+        <dt>最佳时间</dt><dd><strong>5 日约 19:30 一场</strong>（场次以当天公告为准），提前 15 分钟到江边。</dd>
+        <dt>交通</dt><dd>酒店步行圈 / 地铁 4 号线市民中心站一带。</dd>
+        <dt>坑</dt><dd>灯光秀不是每晚都有、场次会调整，当天先看公告；江边风大，12 月晚上穿够。</dd></dl></div>
+      <div class="spot"><h4><span class="n">02</span>湖滨 / 西湖东岸夜景（集贤亭）</h4>
+        <img class="spotimg" src="assets/img-003.jpg" alt="西湖湖滨集贤亭夜景与对岸亮灯的雷峰塔" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>西湖夜景的门面 · 第一晚先认湖。</strong>湖滨是西湖东岸最热闹的一段，集贤亭立在湖边水面上，入夜亮起金灯；隔湖正对面就是亮灯的雷峰塔和南山路一线灯火。5 日晚上来这里散步看夜景，6 日白天再正式走西湖，等于先夜后昼看两遍。</dd>
+        <dt>站位/朝向</dt><dd>站在集贤亭旁的湖边步道，朝西隔湖拍：亭子做近景、雷峰塔灯光做远景，和图里同一个构图。</dd>
+        <dt>最佳时间</dt><dd>天黑透后（约 18:30 以后）灯和倒影最稳；5 日看完钱江灯光秀再过来正好。</dd>
+        <dt>交通</dt><dd>地铁 1 号线龙翔桥站出站步行约 5 分钟到湖边；从万象城打车约 20–30 分钟。</dd>
+        <dt>坑</dt><dd>周末晚上湖滨人多，拍亭子要等一波人流过去；别翻栏杆下到湖岸石台上。</dd></dl></div>
+      <div class="spot"><h4><span class="n">03</span>灵隐寺 + 飞来峰</h4>
+        <img class="spotimg" src="assets/img-004.jpg" alt="灵隐寺黄墙与殿宇" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>千年古刹 · 杭州香火最盛的寺。</strong>进山先过飞来峰：溪边石壁上全是宋代石刻造像，笑佛就在崖壁上；再进灵隐寺，黄墙、古树和层层殿宇沿山势排开。看点是「先石刻、后古寺」的一整片山林氛围，不是单看一座殿。</dd>
+        <dt>站位/朝向</dt><dd>飞来峰在溪对岸拍石壁造像全景；灵隐寺站在天王殿前广场朝里拍黄墙和殿宇纵深，人多时贴边等空档。</dd>
+        <dt>最佳时间</dt><dd><strong>6 日早上 08:30 前到</strong>，周日越晚进山路越堵、人越多。</dd>
+        <dt>交通</dt><dd>从万象城打车约 13 公里、35–50 分钟直达；回程去断桥打车约 20–30 分钟。</dd>
+        <dt>坑</dt><dd>要买飞来峰景区 + 灵隐寺两道票，节假日和周末建议提前在官方渠道预约；寺内殿堂先看拍照标识。</dd></dl></div>
+      <div class="spot"><h4><span class="n">04</span>断桥 · 白堤 · 孤山</h4>
+        <img class="spotimg" src="assets/img-005.jpg" alt="西湖断桥与白堤湖面" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>西湖的门面 · 白蛇传的断桥。</strong>断桥在白堤东头，是进西湖的第一张照片；沿白堤往西走，一边是外湖大水面、一边是北里湖，走到头是孤山——西湖里最大的岛，树密、人比断桥少。这一段全程平路，适合中午前后慢慢走、边走边拍。</dd>
+        <dt>站位/朝向</dt><dd>断桥站在桥头或宝石山方向回望，拍桥面人流和湖面纵深；白堤中段站在湖边朝南拍外湖 + 远处雷峰塔；孤山在放鹤亭一带拍湖景最安静。</dd>
+        <dt>最佳时间</dt><dd>6 日 11:30–14:30 走这一段，光线足、湖面颜色最好；想拍空桥只能清晨，这次不强求。</dd>
+        <dt>交通</dt><dd>灵隐打车到北山街 / 断桥约 20–30 分钟；走完孤山后打车去龙井约 20 分钟。</dd>
+        <dt>坑</dt><dd>断桥和白堤入口周末人最密，往孤山方向走人会明显变少，别在桥头耗太久。</dd></dl></div>
+      <div class="spot"><h4><span class="n">05</span>龙井村</h4>
+        <img class="spotimg" src="assets/img-006.jpg" alt="龙井村茶园梯田" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>龙井茶的原产地 · 山坳里的茶园村。</strong>村子四面是层层茶园梯田，白墙黛瓦的茶农家散在坡上，坐下来喝一杯当季龙井、看采茶山景，是西湖边最松弛的一站。12 月不是采茶季，茶园是整齐的深绿茶垄，画面干净。</dd>
+        <dt>站位/朝向</dt><dd>站在村口或茶园步道高处，朝山坳拍茶园梯田的层层曲线；再走近拍茶垄近景和村里的白墙房子。</dd>
+        <dt>最佳时间</dt><dd>6 日下午 15:00 前后，斜光打在茶园上层次最好。</dd>
+        <dt>交通</dt><dd>孤山 / 湖西打车约 20 分钟到龙井村；之后打车去雷峰塔约 10–15 分钟。</dd>
+        <dt>坑</dt><dd>喝茶先问清价格再坐下；山路窄，周末下午出村方向容易堵，16:15 前要往雷峰塔走。</dd></dl></div>
+      <div class="spot"><h4><span class="n">06</span>雷峰塔（日落收尾）</h4>
+        <img class="spotimg" src="assets/img-007.jpg" alt="雷峰塔与西湖秋色全景" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>西湖日落点 · 白蛇传的塔。</strong>塔立在南岸夕照山上，是 2002 年在老塔基上重建的五层塔，里面有电梯和老塔遗址。登塔一面看西湖全景和苏堤，一面看南山群山；傍晚先看日落把湖面染金，再等塔身和对岸一起亮灯，一天在这一站收尾。</dd>
+        <dt>站位/朝向</dt><dd>塔上站在朝北 / 朝西的观景层栏杆边：朝北拍西湖全景和白堤远景，朝西拍日落落进南山；下塔后在塔下广场回拍亮灯的塔身。</dd>
+        <dt>最佳时间</dt><dd><strong>17:00 前上塔</strong>，12 月日落约 16:55，先占西侧位置；亮灯后再下塔。</dd>
+        <dt>交通</dt><dd>龙井村打车约 10–15 分钟；看完回万象城打车约 30–40 分钟。</dd>
+        <dt>坑</dt><dd>日落时段塔上人多、电梯要排队，预留 20 分钟上塔时间；开放时间和停止入园时间以当天公告为准，别压着关门点到。</dd></dl></div>
+    </div>
+
+    <h3>杭州打卡地图（图示）</h3>
+    <p class="sub" style="margin-bottom:4px">先看位置再看动线：西湖在西边，灵隐在西湖西侧山里，龙井和雷峰塔在湖南边，住处万象城在东边的钱江新城，机场在最东边江对岸。6 日就是从灵隐开始、沿湖顺时针走一圈回万象城。</p>
+    <div class="fig hzmap">
+      <p class="swipe">← 左右滑动看全图 →</p>
+      <svg viewBox="0 0 1000 640" role="img" aria-label="杭州打卡地图：萧山机场、万象城钱江新城、湖滨、断桥、灵隐寺、龙井村与雷峰塔的位置">
+        <rect x="0" y="0" width="1000" height="640" fill="#f5f1e6"/>
+        <text x="30" y="40" font-size="17" font-weight="700" fill="#1d2733">杭州打卡地图（示意，非真实比例）</text>
+        <text x="970" y="40" text-anchor="end" font-size="16" font-weight="700" fill="#1d2733">N ↑ 北</text>
+        <ellipse cx="420" cy="330" rx="185" ry="118" fill="#a9cde3" opacity="0.55"/>
+        <text x="420" y="338" text-anchor="middle" font-size="22" font-weight="700" fill="#2e5f8a">西湖</text>
+        <g>
+          <rect x="660" y="56" width="310" height="86" rx="12" fill="#fff" stroke="#1d2733" stroke-width="3"/>
+          <text x="815" y="94" text-anchor="middle" font-size="20" font-weight="700">✈ 萧山机场</text>
+          <text x="815" y="122" text-anchor="middle" font-size="14.5" fill="#4c5a68">5日 15:45 落地 · 7日 12:05 起飞</text>
+        </g>
+        <g>
+          <rect x="320" y="56" width="300" height="86" rx="12" fill="#fff" stroke="#2e5f8a" stroke-width="3"/>
+          <text x="470" y="94" text-anchor="middle" font-size="20" font-weight="700">断桥 · 白堤 · 孤山</text>
+          <text x="470" y="122" text-anchor="middle" font-size="14.5" fill="#4c5a68">西湖东北岸 · 6日中午沿湖走</text>
+        </g>
+        <g>
+          <rect x="30" y="150" width="250" height="96" rx="12" fill="#fff" stroke="#a87b1f" stroke-width="3"/>
+          <text x="155" y="190" text-anchor="middle" font-size="20" font-weight="700">灵隐寺 · 飞来峰</text>
+          <text x="155" y="218" text-anchor="middle" font-size="14.5" fill="#4c5a68">西湖西侧山里 · 6日第一站</text>
+        </g>
+        <g>
+          <rect x="660" y="190" width="310" height="96" rx="12" fill="#fff" stroke="#2e5f8a" stroke-width="3"/>
+          <text x="815" y="230" text-anchor="middle" font-size="20" font-weight="700">湖滨 · 集贤亭</text>
+          <text x="815" y="258" text-anchor="middle" font-size="14.5" fill="#4c5a68">西湖东岸 · 5日晚夜景</text>
+        </g>
+        <path d="M660,110 C600,140 560,170 520,196" fill="none" stroke="#4c5a68" stroke-width="4" stroke-dasharray="10 7"/>
+        <path d="M280,220 C310,250 330,270 350,285" fill="none" stroke="#4c5a68" stroke-width="4" stroke-dasharray="10 7"/>
+        <g>
+          <rect x="660" y="330" width="310" height="104" rx="12" fill="#b03a2e"/>
+          <text x="815" y="370" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">★ 万象城附近（住这里）</text>
+          <text x="815" y="398" text-anchor="middle" fill="#fff" font-size="14.5">钱江新城 · 地铁 2 / 4 号线钱江路一带</text>
+          <text x="815" y="420" text-anchor="middle" fill="#fff" font-size="14.5">钱江新城灯光秀就在这一片江边</text>
+        </g>
+        <g>
+          <rect x="330" y="148" width="320" height="42" rx="21" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+          <text x="490" y="175" text-anchor="middle" font-size="15" font-weight="700" fill="#b03a2e">机场 → 万象城：地铁19号线约50–60分钟</text>
+        </g>
+        <g>
+          <rect x="600" y="288" width="330" height="40" rx="20" fill="#ffffff" stroke="#2e5f8a" stroke-width="2.5"/>
+          <text x="765" y="314" text-anchor="middle" font-size="15" font-weight="700" fill="#2e5f8a">万象城 → 湖滨：地铁约25–30分钟</text>
+        </g>
+        <g>
+          <rect x="30" y="450" width="260" height="96" rx="12" fill="#fff" stroke="#3a7d2c" stroke-width="3"/>
+          <text x="160" y="490" text-anchor="middle" font-size="20" font-weight="700">龙井村</text>
+          <text x="160" y="518" text-anchor="middle" font-size="14.5" fill="#4c5a68">湖南边山里 · 6日下午喝茶</text>
+        </g>
+        <g>
+          <rect x="350" y="470" width="290" height="96" rx="12" fill="#fff" stroke="#b03a2e" stroke-width="3"/>
+          <text x="495" y="510" text-anchor="middle" font-size="20" font-weight="700">雷峰塔</text>
+          <text x="495" y="538" text-anchor="middle" font-size="14.5" fill="#4c5a68">西湖南岸 · 6日日落收尾</text>
+        </g>
+        <path d="M290,498 C310,505 325,510 348,514" fill="none" stroke="#4c5a68" stroke-width="4" stroke-dasharray="10 7"/>
+        <rect x="0" y="592" width="1000" height="48" fill="#a9cde3"/>
+        <text x="30" y="622" font-size="15" font-weight="700" fill="#2e5f8a">钱塘江（南）· 万象城和钱江新城灯光秀都在江北岸这一片</text>
+      </svg>
+      <p class="figcap">读法：机场单独在最东边，所以落地和离开都给它留足一小时交通；西湖的点全在湖的西、北、南三面，6 日从灵隐进、雷峰塔出，不走回头路；住处万象城在西湖东边约 6 公里，地铁半小时内往返。</p>
+    </div>
+
+    <h3>杭州交通方法（一表看全）</h3>
+    <div class="card">
+      <table>
+        <tr><th>路段</th><th>走法</th><th>时间 / 费用</th></tr>
+        <tr><td><strong>萧山机场 → 万象城</strong>（5日）</td><td>地铁 19 号线机场站直达，耕文路站下步行到万象城一带；或打车走机场高速。</td><td>地铁约 50–60 分钟 · 约 ¥9–10 / 打车约 23km · 40–55 分钟 · 约 ¥70–90</td></tr>
+        <tr><td><strong>万象城 → 钱江新城灯光秀</strong></td><td>步行到钱塘江边 / 市民中心一带，酒店就在这一片。</td><td>步行圈 · 约 10–15 分钟</td></tr>
+        <tr><td><strong>万象城 → 湖滨</strong></td><td>地铁 4 号线转 1 号线到龙翔桥；或打车直达湖滨。</td><td>地铁约 25–30 分钟 / 打车约 6km · 20–30 分钟</td></tr>
+        <tr><td><strong>万象城 → 灵隐寺</strong>（6日）</td><td>打车直达灵隐，早上尽早出发避开进山堵车；地铁换乘 + 接驳不划算。</td><td>约 13km · 35–50 分钟</td></tr>
+        <tr><td><strong>灵隐 → 断桥</strong></td><td>打车到北山街 / 断桥，或公交沿灵隐路出山。</td><td>约 20–30 分钟</td></tr>
+        <tr><td><strong>孤山 → 龙井村 → 雷峰塔</strong></td><td>两段都打车跳点：孤山去龙井约 20 分钟，龙井去雷峰塔约 10–15 分钟。</td><td>合计约 30–35 分钟车程</td></tr>
+        <tr><td><strong>雷峰塔 → 万象城</strong></td><td>打车走南山路 / 复兴路回钱江新城；或到地铁站换乘回钱江路。</td><td>打车约 30–40 分钟</td></tr>
+        <tr><td><strong>万象城 → 萧山机场</strong>（7日）</td><td>地铁 19 号线耕文路直达机场；或打车。09:15–09:30 出发。</td><td>地铁约 50–60 分钟 / 打车约 40–55 分钟</td></tr>
+      </table>
+      <p class="small" style="margin-bottom:0">地铁票价和灯光秀场次以出发当天杭州地铁 / 钱江新城公告为准；打车时间为平峰估算，周末西湖周边和周一早高峰都会更慢。</p>
+    </div>
+  </section>
+
+  <section id="macau">
+    <h2><span class="no">澳门</span>YOHO荷里活罗斯福酒店 · 12月9–11日住 2 晚</h2>
+    <p class="sub">深圳改成 7–9 日，12月9日到澳门，住两晚，12月11日早上打车去机场飞东京。</p>
+
+    <div class="card">
+      <h3 style="margin-top:0">已订酒店</h3>
+      <dl class="kv">
+        <dt>酒店</dt><dd><strong>YOHO荷里活罗斯福酒店（YOHO Hollywood Roosevelt Hotel）</strong>，氹仔</dd>
+        <dt>入住 / 退房</dt><dd>2026年12月9日入住（15:00 后） — 12月11日退房（11:00 前），共 2 晚</dd>
+        <dt>房型</dt><dd>高级金光景大床客房（Deluxe Cotai View King Room），1 张特大双人床，1 间房，2 人</dd>
+        <dt>早餐</dt><dd>不含早餐</dd>
+        <dt>客房设施</dt><dd>免费客房 Wi-Fi、空调、智能马桶、浴缸、风筒</dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">附带礼品券：酒店穿梭巴士</h3>
+      <ul class="tight">
+        <li>酒店穿梭巴士 <strong>1 份，2 人用</strong>，入住期间有效，<strong>无需提前预约</strong>。</li>
+        <li>联络电话：<strong>+853-28820100</strong></li>
+      </ul>
+      <table>
+        <tr><th>线路</th><th>时间</th><th>走向</th></tr>
+        <tr><td>1. 关闸快线</td><td>11:00–20:20</td><td>关闸往返酒店</td></tr>
+        <tr><td>2. 关闸环线</td><td>10:30–13:30</td><td>关闸往返酒店，途经新八佰伴（离议事亭前地步行约 5 分钟）</td></tr>
+        <tr><td>3. 口岸快线</td><td>10:00–18:50</td><td>关闸往返酒店，途经港珠澳大桥、北安码头</td></tr>
+        <tr><td>4. 码头快线</td><td>10:50–18:45</td><td>途经北安码头、港澳码头</td></tr>
+        <tr><td>5. 北安关闸线</td><td>11:20–19:20</td><td>途经关闸及北安码头</td></tr>
+      </table>
+    </div>
+
+    <div class="warn">
+      <strong>穿梭巴士去不了的地方，先说清楚：</strong>
+      <ul class="tight" style="margin-bottom:0">
+        <li><strong>机场去不了：</strong>五条线最早也要 10:00 才发车，赶不上 12月11日 09:30 的 NX862，那天早上<strong>打车去机场</strong>。</li>
+        <li><strong>议事亭 / 大三巴没有直达线：</strong>最接近的是<strong>关闸环线途经新八佰伴</strong>——新八佰伴离议事亭前地步行约 5 分钟，但这条线<strong>只在 10:30–13:30 跑</strong>，错过这个时段就坐不了。</li>
+        <li><strong>路氹金光大道没有直达线：</strong>威尼斯人、巴黎人一带不在穿梭巴士线路上，从酒店打车约 5 分钟过去。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">从酒店出发的交通</h3>
+      <table>
+        <tr><th>去哪里</th><th>距离 / 打车</th><th>其他走法</th></tr>
+        <tr><td><strong>澳门机场</strong></td><td>约 3.5 公里，打车 4–8 分钟，约 MOP 35–45</td><td>12月11日早上就走这条：打车去机场，赶 09:30 的 NX862。</td></tr>
+        <tr><td><strong>议事亭前地</strong>（市中心 / 大三巴方向）</td><td>约 4.1–5 公里，打车 10–15 分钟，约 MOP 50–60</td><td>公交 MOP 6（33 / 26A，约 30–45 分钟）；轻轨在 Jockey Club 站坐氹仔线到妈阁，约 30 分钟。</td></tr>
+        <tr><td><strong>氹仔旧城区 · 官也街</strong></td><td>约 2.2 公里</td><td>打车或步行/公交短途过去，吃饭逛街方便。</td></tr>
+      </table>
+      <p class="small" style="margin-bottom:0">MOP 是澳门元。打车价按澳门计程表推算，高峰和行李会略有出入。</p>
+    </div>
+
+    <h3>澳门每日行程</h3>
+    <p class="sub" style="margin-bottom:4px">三天都以 YOHO 为基地：9 日中午在深圳吃完午饭出发、下午约 15:00–16:00 到，10 日老城整天、11 日一早飞东京。穿梭巴士在 9 日关闸接驳和 10 日上午去老城时用得上，11 日早上赶飞机只能打车。</p>
+
+    <div class="dayhead"><span class="d">12月9日 · 周三</span><h3>到达日：深圳 → 珠海 → 过关 → YOHO 入住</h3><span class="tag">高铁未订</span></div>
+    <p class="small" style="margin-top:2px">不用赶早班车：中午在深圳吃完午饭再出发，走广州南中转去珠海，班次多、好衔接，下午到酒店安顿好，晚上官也街和路氹照常去。</p>
+    <div class="route">
+      <div class="node start">深圳北站<small>中午吃完午饭出发</small></div>
+      <div class="leg"><span class="ln">🚄 深圳北 → 广州南</span><span class="arw">→</span><span class="dt">第一段 · 班次多，按午饭后时间挑一班</span></div>
+      <div class="node">广州南站<small>站内中转</small></div>
+      <div class="leg"><span class="ln">🚄 广州南 → 珠海</span><span class="arw">→</span><span class="dt">第二段 · 两段合计 ¥144.5</span></div>
+      <div class="node">珠海站<small>步行到拱北口岸</small></div>
+      <div class="leg"><span class="ln">🚶 步行 + 过关</span><span class="arw">→</span><span class="dt">拱北口岸过关 · 预留 30–60 分钟</span></div>
+      <div class="node">关闸<small>过关后到澳门侧</small></div>
+      <div class="leg"><span class="ln">🚌 穿梭巴士关闸快线 / 🚕 打车</span><span class="arw">→</span><span class="dt">关闸快线 11:00–20:20 到酒店；或打车约 MOP 75–90 · 约 15–20 分钟（估计）</span></div>
+      <div class="node">YOHO荷里活罗斯福酒店<small>约 15:00–16:00 到 · 入住</small></div>
+    </div>
+    <div class="warn"><strong>想更早到才选：</strong>G6336 深圳北 09:50–珠海 11:43 直达，过关后约 12:45–13:30 到酒店。这趟太早，不作主推，只有想上午就出发、早点到澳门时才选它。</div>
+    <div class="grid two">
+      <div class="card">
+        <h3 style="margin-top:0">晚上 A · 氹仔旧城区（近）</h3>
+        <ul class="tight">
+          <li><strong>官也街晚饭：</strong>从酒店步行约 25 分钟，或打车约 5 分钟，约 MOP 25–30。</li>
+          <li>饭后逛<strong>龙环葡韵</strong>、<strong>嘉模圣母堂</strong>，都是旧城区步行圈，节奏慢，适合到达日。</li>
+          <li>到酒店先歇一歇再出门，晚上不用赶。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">晚上 B · 路氹夜景（体力够再去）</h3>
+        <ul class="tight">
+          <li>打车约 5 分钟去路氹：<strong>威尼斯人</strong>约 2 公里、<strong>巴黎人</strong>约 2.4 公里。</li>
+          <li>以看夜景为主，不用排满，第二天还要走老城整天。</li>
+          <li>A、B 两边想去哪边临时挑都行，按当晚体力定。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dayhead"><span class="d">12月10日 · 周四</span><h3>老城一日：议事亭 → 大三巴 → 妈阁 → 路氹夜景</h3><span class="tag">穿梭巴士去程</span></div>
+    <div class="route">
+      <div class="node start">YOHO酒店<small>10:30 出发</small></div>
+      <div class="leg"><span class="ln">🚌 穿梭巴士关闸环线</span><span class="arw">→</span><span class="dt">10:30–13:30 期间班次 · 途经新八佰伴下车</span></div>
+      <div class="node">新八佰伴<small>步行约 5 分钟</small></div>
+      <div class="leg"><span class="ln">🚶 步行</span><span class="arw">→</span><span class="dt">约 5 分钟到议事亭前地</span></div>
+      <div class="node">议事亭前地<small>老城步行线起点</small></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">上午到中午 · 老城步行线（顺路不走回头）</h3>
+      <p style="margin:6px 0"><strong>议事亭前地 → 玫瑰堂 → 大三巴牌坊 → 大炮台 → 卢家大屋 → 大三巴街午饭</strong></p>
+      <ul class="tight">
+        <li>全程步行串起来，上午光线好、人还没到最挤的时候，先把大三巴拍完再吃午饭。</li>
+        <li>大三巴街一带吃午饭，选择多，不用另外找地方。</li>
+      </ul>
+      <h3>下午</h3>
+      <ul class="tight">
+        <li><strong>妈阁庙</strong>：从老城往南走，下午去正好顺光。</li>
+        <li><strong>澳门塔</strong>：和妈阁庙同一方向；也可以坐轻轨去<strong>妈阁站</strong>再走，两边选顺脚的走法。</li>
+      </ul>
+      <h3>傍晚回酒店 + 晚上</h3>
+      <ul class="tight">
+        <li><strong>傍晚打车回酒店：</strong>约 MOP 50–60，10–15 分钟。穿梭巴士环线 13:30 后已停，不要等它。</li>
+        <li><strong>晚上路氹金光大道：</strong>威尼斯人大运河 → 巴黎人铁塔夜景 → 伦敦人，打车约 5 分钟一段段跳，或挑巴黎人夜景作主景慢慢拍。</li>
+      </ul>
+    </div>
+
+    <div class="dayhead"><span class="d">12月11日 · 周五</span><h3>离开日：打车去机场 → 飞东京</h3><span class="tag red">已订航班</span></div>
+    <div class="route">
+      <div class="node start">YOHO酒店<small>07:00–07:15 出发</small></div>
+      <div class="leg"><span class="ln">🚕 打车去机场</span><span class="arw">→</span><span class="dt">约 MOP 35–45 · 4–8 分钟 · 穿梭巴士最早 10:00 发车，用不上</span></div>
+      <div class="node">澳门机场<small>提前到，办值机托运</small></div>
+      <div class="leg"><span class="ln">✈ Air Macau NX862</span><span class="arw">→</span><span class="dt">09:30 起飞 → 成田 14:30（接东京段，见每日出行图 11 日）</span></div>
+      <div class="node">成田 T2<small>转入东京行程</small></div>
+    </div>
+    <p class="small">这天不要排任何早餐外出或穿梭巴士计划：07:00–07:15 上车是硬时间，行李前一晚先收好。</p>
+
+    <h3>澳门景点图鉴（图 · 介绍 · 站位）</h3>
+    <p class="sub" style="margin-bottom:4px">澳门这次会走到的点都在这里：先看图认地方，再看介绍知道它是什么，最后看站位和时间怎么拍。</p>
+    <div class="card" style="padding-top:4px;padding-bottom:4px">
+      <div class="spot"><h4><span class="n">01</span>大三巴牌坊</h4>
+        <img class="spotimg" src="assets/img-008.jpg" alt="大三巴牌坊石雕立面与台阶" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>教堂遗址 · 澳门的标志。</strong>原是圣保禄大教堂，1835 年大火后只剩这面巴洛克石雕前壁，立在长台阶之上，远看像一座巨大的石牌坊。浮雕融合中西图案，是世界文化遗产「澳门历史城区」的核心，第一次来澳门先认它。</dd>
+        <dt>站位/朝向</dt><dd>站在牌坊正前方台阶下或大炮台方向回望，把牌坊立面完整收进画面。</dd>
+        <dt>最佳时间</dt><dd><strong>早上 09:00 前或傍晚</strong>人最少；这次 10 日是上午到，想避人就尽量早到这一站，或留到傍晚补拍。</dd>
+        <dt>坑</dt><dd>中午到下午人最密，台阶上全是人，画面很难干净。</dd></dl></div>
+      <div class="spot"><h4><span class="n">02</span>巴黎人铁塔夜景</h4>
+        <img class="spotimg" src="assets/img-009.jpg" alt="澳门巴黎人铁塔夜晚亮灯" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>度假村地标 · 夜景地标。</strong>按巴黎埃菲尔铁塔约一半比例复刻的铁塔，立在金光大道边，白天是钢架剪影，入夜整塔亮起灯光。对面人行道是拍全景最顺手的位置，看完威尼斯人、伦敦人再来拍它正好。</dd>
+        <dt>站位/朝向</dt><dd>站在巴黎人对面的金光大道人行道或铁塔正前方广场，朝铁塔拍全景。</dd>
+        <dt>最佳时间</dt><dd><strong>入夜后</strong>，等铁塔灯光全亮再拍；9 日晚上 B 方案或 10 日晚上路氹段都可以拍，10 日晚上时间更充裕。</dd>
+        <dt>坑</dt><dd>天没全黑时灯光不出效果，别太早收机。</dd></dl></div>
+      <div class="spot"><h4><span class="n">03</span>议事亭前地傍晚灯光</h4>
+        <img class="spotimg" src="assets/img-010.jpg" alt="议事亭前地波浪地砖与葡式建筑" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>葡式市政广场 · 老城的心脏。</strong>黑白波浪地砖铺满地面，两侧是薄荷绿、鹅黄的南欧风骑楼，正面是仁慈堂。白天是市集和人群，傍晚亮灯后最有欧洲小城的味道；从这里步行去大三巴只要几分钟。</dd>
+        <dt>站位/朝向</dt><dd>站在广场中央波浪地砖上，朝仁慈堂和两侧葡式建筑拍，带上广场的纵深。</dd>
+        <dt>最佳时间</dt><dd><strong>傍晚亮灯时分</strong>，天色将暗未暗、建筑灯光刚起的时候层次最好。</dd>
+        <dt>坑</dt><dd>这次 10 日是上午到议事亭，傍晚若还在老城就顺手拍；若已回氹仔，不必专程再跑一趟。</dd></dl></div>
+      <div class="spot"><h4><span class="n">04</span>官也街</h4>
+        <img class="spotimg" src="assets/img-011.jpg" alt="官也街美食手信街人流与招牌" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>美食手信街 · 氹仔旧城区。</strong>一条百来米的窄街，两边挤满手信铺、葡国菜和老字号小吃，招牌和彩色外墙很上镜。看点不在大景，在边走边吃：杏仁饼、猪扒包、水蟹粥都在这一带，适合 9 日到达日晚饭直接来。</dd>
+        <dt>站位/朝向</dt><dd>站在街口朝里拍招牌纵深，或在小吃铺前拍近景；人多时贴边走，画面反而更有烟火气。</dd>
+        <dt>最佳时间</dt><dd>傍晚到晚上，店铺全开、灯亮起来最热闹。</dd>
+        <dt>坑</dt><dd>街窄人多，热门铺子要排队；别站在街心挡路拍照。</dd></dl></div>
+      <div class="spot"><h4><span class="n">05</span>龙环葡韵</h4>
+        <img class="spotimg" src="assets/img-012.jpg" alt="龙环葡韵薄荷绿葡式住宅" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>葡式住宅群 · 博物馆区。</strong>五栋薄荷绿的葡萄牙式大宅沿坡而建，以前是土生葡人官员的住所，现在改成博物馆，屋前是湿地和荷花池。颜色清新、人比老城少，是氹仔最耐看的一片慢景。</dd>
+        <dt>站位/朝向</dt><dd>站在湿地木栈道或对岸步道，隔水拍五栋绿宅排成一列；再走近拍单栋的门廊和窗。</dd>
+        <dt>最佳时间</dt><dd>下午光线打在立面上最柔和；和嘉模圣母堂、官也街步行串成一圈。</dd>
+        <dt>坑</dt><dd>博物馆有开放时间，只看外观和湿地不受影响；夏季蚊子多，傍晚带驱蚊。</dd></dl></div>
+      <div class="spot"><h4><span class="n">06</span>嘉模圣母堂</h4>
+        <img class="spotimg" src="assets/img-013.jpg" alt="嘉模圣母堂鹅黄色教堂" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>天主教堂 · 氹仔旧城地标。</strong>鹅黄色的新古典小教堂立在小坡上，1860 年代建成，正面是简洁的三角楣和钟楼，门前一小片广场和大树。就挨着龙环葡韵和官也街，三个点步行串成一圈，是旧城区最顺的一段。</dd>
+        <dt>站位/朝向</dt><dd>站在教堂前广场下坡处朝上拍全貌，把钟楼和门前大树一起收进来。</dd>
+        <dt>最佳时间</dt><dd>下午顺光，黄色立面最出色。</dd>
+        <dt>坑</dt><dd>教堂是礼拜场所，遇弥撒时段保持安静，内部拍照先看标识。</dd></dl></div>
+      <div class="spot"><h4><span class="n">07</span>妈阁庙</h4>
+        <img class="spotimg" src="assets/img-014.jpg" alt="妈阁庙山门与石狮" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>妈祖庙 · 澳门最古老的庙宇。</strong>依山而建的石殿、牌坊和亭台已有五百多年，香火不断，门口一对石狮子是标志。「澳门」的名字就源于渔民问路时听到的「妈阁」。看点是中式庙宇和旁边葡式街区的反差。</dd>
+        <dt>站位/朝向</dt><dd>站在庙前广场拍山门和石狮全貌，再沿石阶往上拍依山层叠的殿宇。</dd>
+        <dt>最佳时间</dt><dd>下午顺光时石刻最清楚；10 日下午从老城往南走正好到。</dd>
+        <dt>坑</dt><dd>庙内香火烟大，拍照不要挡参拜动线；殿内先看能否拍摄的标识。</dd></dl></div>
+      <div class="spot"><h4><span class="n">08</span>澳门塔</h4>
+        <img class="spotimg" src="assets/img-015.jpg" alt="澳门塔与海湾" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>观光塔 · 城市地标。</strong>高 338 米，塔顶有观光层和玻璃地板，还能蹦极和空中漫步；不上塔，站在塔下广场隔海看半岛天际线也成立。它和妈阁庙同在半岛南端，下午可以连着走，傍晚看塔身亮灯。</dd>
+        <dt>站位/朝向</dt><dd>塔下广场朝上拍塔身全高，或隔海在对岸拍塔和天际线同框。</dd>
+        <dt>最佳时间</dt><dd>傍晚亮灯前后；上塔看日落要提前订时段。</dd>
+        <dt>坑</dt><dd>高空项目受天气影响大，风大时会暂停；只拍照的话不必买上塔票。</dd></dl></div>
+      <div class="spot"><h4><span class="n">09</span>威尼斯人大运河</h4>
+        <img class="spotimg" src="assets/img-016.jpg" alt="威尼斯人室内大运河与贡多拉" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>大型度假村 · 室内运河购物中心。</strong>把威尼斯搬进室内：人工运河穿过商场，贡多拉船夫边划边唱，天花板是永远蓝天白云的假天空。看点就是这条大运河和圣马可广场式的内场，晚上从酒店打车约 5 分钟，逛街拍照避雨都合适。</dd>
+        <dt>站位/朝向</dt><dd>站在运河桥上朝河道纵深拍，贡多拉入画最有代表性；广场区拍假天空和钟楼内景。</dd>
+        <dt>最佳时间</dt><dd>室内不受天气和时间影响，晚上路氹段顺路逛。</dd>
+        <dt>坑</dt><dd>商场非常大，容易绕路，进门先记好出口方向；坐贡多拉要另买票排队。</dd></dl></div>
+      <div class="spot"><h4><span class="n">10</span>大炮台</h4>
+        <img class="spotimg" src="assets/img-017.jpg" alt="大炮台古炮与城墙" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>古炮台要塞 · 老城制高点。</strong>山顶平台上摆着古炮和城墙，17 世纪守过澳门，现在是俯瞰老城屋顶和回望大三巴的最佳角度。10 日步行线里它和大三巴挨着，上台阶就能连着走。</dd>
+        <dt>站位/朝向</dt><dd>在平台边缘朝老城方向拍屋顶海，或回望把大三巴立面收进画面。</dd>
+        <dt>最佳时间</dt><dd>上午人少光顺，和大三巴连拍。</dd>
+        <dt>坑</dt><dd>上山有一段台阶和坡道，预留体力；平台无遮阴，带水。</dd></dl></div>
+      <div class="spot"><h4><span class="n">11</span>伦敦人</h4>
+        <img class="spotimg" src="assets/img-018.jpg" alt="澳门伦敦人大本钟夜景" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>英伦主题度假村 · 路氹夜景一员。</strong>按伦敦大本钟和国会大厦复刻的外墙，入夜亮起金色灯光，和巴黎人铁塔隔街相望。看点是整排路氹酒店的夜景连片效果，10 日晚上和威尼斯人、巴黎人一段段跳着拍最顺。</dd>
+        <dt>站位/朝向</dt><dd>站在金光大道对面人行道拍大本钟全貌，再往巴黎人方向走拍两塔同框的街道纵深。</dd>
+        <dt>最佳时间</dt><dd>入夜灯光全亮后。</dd>
+        <dt>坑</dt><dd>大道车流大，只在人行道和天桥上停留拍照。</dd></dl></div>
+      <div class="spot"><h4><span class="n">12</span>玫瑰堂与卢家大屋（步行线顺路）</h4>
+        <img class="spotimg" src="assets/img-019.jpg" alt="玫瑰堂黄色巴洛克教堂立面" loading="lazy" />
+        <img class="spotimg" src="assets/img-020.jpg" alt="卢家大屋中式天井与砖雕" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>巴洛克教堂 + 中式大宅 · 老城步行线的两站。</strong>玫瑰堂（图）是鹅黄色的巴洛克小教堂，就在大三巴街口，里面安静、彩窗漂亮；卢家大屋是清末富商的中式大宅，天井和砖雕讲究。两个点都在议事亭到大三巴的路上，顺路进去看十分钟就够，不用专程安排。</dd>
+        <dt>站位/朝向</dt><dd>玫瑰堂站在街对面拍黄色立面全貌；卢家大屋在天井里朝上拍光影和雕花。</dd>
+        <dt>最佳时间</dt><dd>跟着 10 日上午步行线走即可。</dd>
+        <dt>坑</dt><dd>两处都是文物建筑，内部拍照先看标识，卢家大屋有开放时间。</dd></dl></div>
+    </div>
+  </section>
+
+  <section id="metro">
+    <h2><span class="no">图一</span>东京地铁线路图（行程版）</h2>
+    <p class="sub">只画这次用得上的线：山手线环线为主干，加上丸之内线、有乐町线、副都心线、银座线、浅草线、大江户线。示意图，非官方比例，认线认站即可。</p>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--yamanote)"></i>JR山手线（环线）</span>
+      <span><i class="dot" style="background:var(--marunouchi)"></i>丸之内线</span>
+      <span><i class="dot" style="background:var(--yurakucho)"></i>有乐町线</span>
+      <span><i class="dot" style="background:var(--fukutoshin)"></i>副都心线</span>
+      <span><i class="dot" style="background:var(--ginza)"></i>银座线</span>
+      <span><i class="dot" style="background:var(--asakusa)"></i>浅草线</span>
+      <span><i class="dot" style="background:var(--oedo)"></i>大江户线</span>
+    </div>
+    <div class="fig">
+      <svg viewBox="0 0 920 660" role="img" aria-label="东京地铁线路示意图">
+        <!-- Yamanote loop -->
+        <path d="M150,118 L330,96 L452,128 L512,196 L548,282 L560,398 L542,468 L472,528 L332,544 L172,486 L112,302 Z"
+              fill="none" stroke="#80c241" stroke-width="7" stroke-linejoin="round"/>
+        <!-- Marunouchi -->
+        <polyline points="150,118 112,302 300,392 428,428 520,446 560,398" fill="none" stroke="#e60012" stroke-width="4"/>
+        <!-- Yurakucho -->
+        <polyline points="150,118 300,210 428,300 542,468 762,428" fill="none" stroke="#c1a470" stroke-width="4"/>
+        <!-- Fukutoshin -->
+        <polyline points="150,118 142,296 188,414 172,486" fill="none" stroke="#9c5e31" stroke-width="4"/>
+        <!-- Ginza line -->
+        <polyline points="172,486 300,456 452,470 520,446 556,342 512,196 642,178" fill="none" stroke="#ff9500" stroke-width="4"/>
+        <!-- Asakusa line -->
+        <polyline points="642,178 602,300 566,398 522,498 482,526" fill="none" stroke="#ec6e65" stroke-width="4"/>
+        <!-- Oedo -->
+        <polyline points="112,302 250,420 398,466 482,526" fill="none" stroke="#b6007a" stroke-width="4"/>
+        <!-- out-of-city arrows -->
+        <g stroke="#4c5a68" stroke-width="2.5" fill="none" marker-end="url(#arw)">
+          <line x1="150" y1="118" x2="52" y2="52"/>
+          <line x1="560" y1="398" x2="700" y2="330"/>
+          <line x1="560" y1="398" x2="716" y2="470"/>
+          <line x1="452" y1="128" x2="560" y2="52"/>
+          <line x1="112" y1="302" x2="30" y2="360"/>
+        </g>
+        <defs><marker id="arw" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#4c5a68"/></marker></defs>
+        <g font-size="13.5" fill="#4c5a68">
+          <text x="8" y="40">JR湘南新宿线 ↘ 镰仓方向</text>
+          <text x="706" y="322">北陆新干线 → 轻井泽</text>
+          <text x="722" y="478">京叶线 → 舞浜·迪士尼</text>
+          <text x="566" y="44">Skyliner → 成田机场</text>
+          <text x="8" y="384">高速巴士/富士回游 → 河口湖</text>
+        </g>
+        <!-- stations -->
+        <g font-size="15" font-weight="700">
+          <g><circle cx="150" cy="118" r="9" fill="#fff" stroke="#1d2733" stroke-width="3"/><text x="128" y="98">池袋（酒店）</text></g>
+          <g><circle cx="112" cy="302" r="7" fill="#fff" stroke="#1d2733" stroke-width="2.5"/><text x="30" y="292">新宿</text></g>
+          <g><circle cx="172" cy="486" r="7" fill="#fff" stroke="#1d2733" stroke-width="2.5"/><text x="120" y="516">涩谷</text></g>
+          <g><circle cx="188" cy="414" r="5.5" fill="#fff" stroke="#9c5e31" stroke-width="2.5"/><text x="200" y="408">原宿·明治神宫</text></g>
+          <g><circle cx="398" cy="466" r="6" fill="#fff" stroke="#b6007a" stroke-width="2.5"/><text x="352" y="492">六本木</text></g>
+          <g><circle cx="452" cy="470" r="5" fill="#fff" stroke="#ff9500" stroke-width="2.5"/><text x="408" y="452">虎之门·东京塔方向</text></g>
+          <g><circle cx="520" cy="446" r="6" fill="#fff" stroke="#1d2733" stroke-width="2.5"/><text x="492" y="428">银座</text></g>
+          <g><circle cx="542" cy="468" r="5" fill="#fff" stroke="#c1a470" stroke-width="2.5"/><text x="552" y="492">有乐町</text></g>
+          <g><circle cx="560" cy="398" r="8" fill="#fff" stroke="#1d2733" stroke-width="3"/><text x="574" y="392">东京站</text></g>
+          <g><circle cx="548" cy="282" r="6" fill="#fff" stroke="#1d2733" stroke-width="2.5"/><text x="562" y="276">秋叶原</text></g>
+          <g><circle cx="512" cy="196" r="6" fill="#fff" stroke="#1d2733" stroke-width="2.5"/><text x="524" y="190">上野</text></g>
+          <g><circle cx="452" cy="128" r="6" fill="#fff" stroke="#1d2733" stroke-width="2.5"/><text x="428" y="112">日暮里（换Skyliner）</text></g>
+          <g><circle cx="642" cy="178" r="7" fill="#fff" stroke="#1d2733" stroke-width="2.5"/><text x="656" y="172">浅草</text></g>
+          <g><circle cx="762" cy="428" r="6" fill="#fff" stroke="#c1a470" stroke-width="2.5"/><text x="742" y="408">丰洲 teamLab</text></g>
+          <g><circle cx="482" cy="526" r="5.5" fill="#fff" stroke="#b6007a" stroke-width="2.5"/><text x="462" y="552">大门·赤羽桥（东京塔）</text></g>
+          <g><circle cx="332" cy="544" r="5" fill="#fff" stroke="#80c241" stroke-width="2.5"/><text x="290" y="570">品川</text></g>
+        </g>
+        <g font-size="13" fill="#b03a2e" font-weight="700">
+          <text x="660" y="140">▲ 晴空塔（押上）</text>
+          <text x="330" y="640">山手线一圈约60分钟 · 池袋→新宿约6分钟 / 池袋→涩谷约13分钟 / 池袋→东京约25分钟</text>
+        </g>
+      </svg>
+      <p class="figcap">读法：住在环线西北角的池袋，去哪都先想「山手线顺时针还是逆时针近」。去浅草走银座线一端到底；去丰洲有乐町线从池袋直达；去六本木、东京塔走大江户线。</p>
+    </div>
+  </section>
+
+  <section id="hotelmap">
+    <h2><span class="no">图二</span>酒店到不同地铁站示意图</h2>
+    <p class="sub">11–17日住 Tora 期间用这张图。Tora Hotel 在池袋站西北侧。近站是要町，车次全、能换乘的大站是池袋——按目的地选门，别每天都走同一条路。17–19日酒店未定，定下来后再补那两晚的到站图。</p>
+    <div class="fig">
+      <svg viewBox="0 0 920 560" role="img" aria-label="酒店到要町站和池袋站示意图">
+        <!-- streets -->
+        <g stroke="#ddd6c8" stroke-width="16">
+          <line x1="0" y1="150" x2="920" y2="150"/>
+          <line x1="0" y1="330" x2="920" y2="330"/>
+          <line x1="240" y1="0" x2="240" y2="560"/>
+          <line x1="560" y1="0" x2="560" y2="560"/>
+        </g>
+        <g font-size="12.5" fill="#4c5a68">
+          <text x="16" y="140">要町通り</text>
+          <text x="16" y="320">川越街道方向</text>
+          <text x="248" y="24">山手通り</text>
+        </g>
+        <!-- walking routes -->
+        <path d="M300,262 L470,220 L640,168" fill="none" stroke="#b03a2e" stroke-width="4" stroke-dasharray="10 7"/>
+        <path d="M316,300 L480,330 L700,392" fill="none" stroke="#2e5f8a" stroke-width="4" stroke-dasharray="10 7"/>
+        <!-- hotel -->
+        <g>
+          <rect x="216" y="238" width="168" height="62" rx="10" fill="#b03a2e"/>
+          <text x="300" y="264" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">★ Tora Hotel</text>
+          <text x="300" y="286" text-anchor="middle" fill="#fff" font-size="12.5">3-41-3 Ikebukuro</text>
+        </g>
+        <!-- Kanamecho -->
+        <g>
+          <rect x="612" y="118" width="240" height="86" rx="10" fill="#fff" stroke="#c1a470" stroke-width="3"/>
+          <text x="732" y="146" text-anchor="middle" font-size="16" font-weight="700">要町站</text>
+          <text x="732" y="168" text-anchor="middle" font-size="13">有乐町线 · 副都心线</text>
+          <text x="732" y="189" text-anchor="middle" font-size="13" fill="#4c5a68">约750m · 步行9–10分钟</text>
+        </g>
+        <!-- Ikebukuro station -->
+        <g>
+          <rect x="596" y="368" width="300" height="118" rx="10" fill="#fff" stroke="#1d2733" stroke-width="3"/>
+          <text x="746" y="396" text-anchor="middle" font-size="16" font-weight="700">池袋站（大站）</text>
+          <text x="746" y="418" text-anchor="middle" font-size="12.5">JR山手线·埼京线·湘南新宿线</text>
+          <text x="746" y="436" text-anchor="middle" font-size="12.5">丸之内线·有乐町线·副都心线</text>
+          <text x="746" y="454" text-anchor="middle" font-size="12.5">东武东上线·西武池袋线</text>
+          <text x="746" y="474" text-anchor="middle" font-size="13" fill="#4c5a68">约1公里 · 步行13–15分钟</text>
+        </g>
+        <g font-size="14" font-weight="700">
+          <text x="392" y="200" fill="#b03a2e">步行约9–10分钟</text>
+          <text x="400" y="352" fill="#2e5f8a">步行约13–15分钟</text>
+        </g>
+        <g font-size="13" fill="#4c5a68">
+          <text x="16" y="540">N ↑ 北 · 示意图，非真实比例。东口在池袋站东侧：河口湖巴士、阳光城都在东口出。</text>
+        </g>
+      </svg>
+      <p class="figcap">出门先分清：赶时间、去丰洲/有乐町/涩谷方向 → 走要町站；去新宿、东京站、镰仓、机场方向，或要逛池袋站周边 → 走池袋站。</p>
+    </div>
+    <div class="grid two">
+      <div class="card">
+        <h3 style="margin-top:0">要町站能去哪里</h3>
+        <ul class="tight">
+          <li><strong>有乐町线直达：</strong>有乐町（约25分钟）、银座一丁目、丰洲（约32分钟，teamLab Planets 换乘口）、月岛（换大江户线去六本木）。</li>
+          <li><strong>副都心线直达：</strong>新宿三丁目（约8分钟）、明治神宫前/原宿（约11分钟）、涩谷（约14分钟）。</li>
+          <li>适合：去东边（丰洲、银座）和涩谷方向，比绕去池袋站省一段步行。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">池袋站能去哪里</h3>
+        <ul class="tight">
+          <li><strong>JR山手线：</strong>新宿（约6分钟 ¥170）、涩谷（约13分钟 ¥200左右）、东京站（约25分钟）、上野、日暮里（换 Skyliner 去成田）。</li>
+          <li><strong>JR湘南新宿线：</strong>镰仓直达约60分钟 ¥1,040；埼京线去新宿/涩谷也快。</li>
+          <li><strong>地铁三线 + 私铁两线：</strong>丸之内线去东京站/银座；东武东上线、西武池袋线去近郊。</li>
+          <li><strong>池袋东口：</strong>河口湖直达巴士乘车点、阳光城都在这一侧。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="days">
+    <h2><span class="no">图三</span>每天从酒店出发的出行示意图</h2>
+    <p class="sub">每一天一张：从酒店出门坐什么线、往哪个方向、几站、几分钟、多少钱，景点之间也逐段标明。票价为 Suica 刷卡约数，市内一段一般 ¥170–¥260。</p>
+
+    <div class="dayhead"><span class="d">12月11日 · 周五</span><h3>到达日：澳门 → 成田 → 池袋入住</h3><span class="tag red">已订航班</span></div>
+    <div class="route">
+      <div class="node start">YOHO荷里活罗斯福酒店<small>氹仔 · 11:00 前退房，实际一早出发</small></div>
+      <div class="leg"><span class="ln">🚕 打车去机场</span><span class="arw">→</span><span class="dt">约 3.5 公里 · 4–8 分钟 · 约 MOP 35–45（穿梭巴士最早 10:00，赶不上）</span></div>
+      <div class="node">澳门机场<small>NX862 · 09:30 起飞</small></div>
+      <div class="leg"><span class="ln">✈ Air Macau NX862</span><span class="arw">→</span><span class="dt">约4小时 · 行李每人手提7kg + 托运32kg</span></div>
+      <div class="node">成田机场 T2<small>14:30 落地</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#00418e"></i>Skyliner</span><span class="arw">→</span><span class="dt">约36分钟 · 到日暮里</span></div>
+      <div class="node">日暮里<small>站内换乘 JR</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--yamanote)"></i>JR山手线</span><span class="arw">→</span><span class="dt">往上野·池袋方向 · 约13分钟</span></div>
+      <div class="node">池袋站<small>西口出站</small></div>
+      <div class="leg"><span class="ln">🚶 步行</span><span class="arw">→</span><span class="dt">约1公里 · 13–15分钟</span></div>
+      <div class="node">Tora Hotel<small>约17:00–17:30 到</small></div>
+    </div>
+    <p class="small">机场到酒店全程约 ¥2,790/人（Skyliner + 山手线）。成田没有地铁直达池袋，必须在日暮里换一次 JR——出关、取行李预留 60–90 分钟，所以到酒店按 17:00–17:30 算。当晚不排景点，酒店附近吃晚饭、买第二天早餐。</p>
+
+    <div class="dayhead"><span class="d">12月12日 · 周六</span><h3>浅草 + 晴空塔日落</h3><span class="tag">暂定</span></div>
+    <img class="photo" src="assets/img-021.webp" alt="浅草寺雷门" />
+    <div class="route">
+      <div class="node start">Tora Hotel<small>步行到池袋站</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--yamanote)"></i>JR山手线</span><span class="arw">→</span><span class="dt">往上野方向 · 约18分钟 · 约¥210</span></div>
+      <div class="node">上野<small>换银座线</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--ginza)"></i>银座线</span><span class="arw">→</span><span class="dt">往浅草方向 · 3站约5分钟 · 约¥180</span></div>
+      <div class="node">浅草<small>雷门·浅草寺·仲见世</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--asakusa)"></i>都营浅草线</span><span class="arw">→</span><span class="dt">1站约4分钟 · 约¥180（或沿隅田川步行约20分钟）</span></div>
+      <div class="node">押上<small>晴空塔 · 日落场</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#00418e"></i>半藏门线→涩谷方向换乘回</span><span class="arw">→</span><span class="dt">或原路经上野回池袋 · 约40分钟</span></div>
+      <div class="node">Tora Hotel<small>晚间到</small></div>
+    </div>
+    <p class="small">晴空塔天望甲板 ¥1,800 起、甲板+天望回廊套票 ¥3,000 起，网上订比现场便宜约 ¥500（未订票，按官网为准）。周六人多，日落时段先在网上订好再去。</p>
+    <img class="photo" src="assets/img-022.jpg" alt="东京晴空塔与城市天际线" loading="lazy" />
+    <p class="small" style="margin-top:0"><strong>晴空塔是什么：</strong>634 米的电视塔，东京最高的地标（介绍和机位见下方「东京机位卡」）。这天先逛浅草寺再上塔看日落，一旧一新正好对照。</p>
+
+    <div class="dayhead"><span class="d">12月13日 · 周日</span><h3>明治神宫 / 原宿 / 涩谷 Sky</h3><span class="tag">暂定</span></div>
+    <img class="photo" src="assets/img-023.webp" alt="涩谷十字路口夜景" />
+    <div class="route">
+      <div class="node start">Tora Hotel<small>步行到要町站</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--fukutoshin)"></i>副都心线</span><span class="arw">→</span><span class="dt">往涩谷方向 · 直达约11分钟 · 约¥200</span></div>
+      <div class="node">明治神宫前<small>明治神宫·原宿·表参道</small></div>
+      <div class="leg"><span class="ln">🚶 步行</span><span class="arw">→</span><span class="dt">经表参道往涩谷 · 约20分钟（或山手线1站）</span></div>
+      <div class="node">涩谷<small>15:00 进 Shibuya Sky</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--fukutoshin)"></i>副都心线</span><span class="arw">→</span><span class="dt">往和光市方向 · 直达要町约14分钟 · 约¥200</span></div>
+      <div class="node">要町站<small>步行9–10分钟回酒店</small></div>
+    </div>
+    <p class="small">涩谷 Sky 按小红书实测节奏：<strong>15:00 进场</strong>，看 16:00 左右的冬日日落，再留下来看夜景灯光，一张票看三段。门票提前 14 天 00:00（JST）开售，¥2,700（10:00–14:59 场）/ ¥3,400（15:00 后场），日落场最先卖完；进场要带护照原件。票未订，按官网为准。涩谷的「青之洞窟」灯饰 2026 年日期<strong>未核实</strong>，到了当地再看。</p>
+    <div class="mini">
+      <figure><img src="assets/img-024.jpg" alt="明治神宫森林参道大鸟居" loading="lazy" /><figcaption><strong>明治神宫</strong> — 藏在市中心森林里的神社，高大鸟居和安静参道，一进门就像走进山里（详见机位卡）。</figcaption></figure>
+      <figure><img src="assets/img-025.jpg" alt="原宿竹下通彩色街景" loading="lazy" /><figcaption><strong>原宿</strong> — 年轻潮流街区，竹下通挤满可丽饼、古着和彩色小店，和神宫的安静正好两个世界。</figcaption></figure>
+      <figure><img src="assets/img-026.jpg" alt="涩谷Sky屋顶展望台日落" loading="lazy" /><figcaption><strong>涩谷 Sky</strong> — 涩谷站楼顶的露天展望台，脚下是十字路口，一张票看白天、日落和夜景三段。</figcaption></figure>
+    </div>
+
+    <div class="dayhead"><span class="d">12月14日 · 周一</span><h3>富士山主选日（天气不好则与16日对调）</h3><span class="tag red">看天气 · 11–12日定</span></div>
+    <img class="photo" src="assets/img-001.webp" alt="富士山与忠灵塔" />
+    <div class="route">
+      <div class="node start">Tora Hotel<small>06:30 前出门</small></div>
+      <div class="leg"><span class="ln">🚶 步行</span><span class="arw">→</span><span class="dt">到池袋东口 · 约15分钟</span></div>
+      <div class="node">池袋东口 / 阳光城<small>07:10 发（阳光城 07:00）</small></div>
+      <div class="leg"><span class="ln">🚌 池袋直达高速巴士</span><span class="arw">→</span><span class="dt">约1小时55分 · ¥2,200/人</span></div>
+      <div class="node">河口湖站<small>09:05 到 · 全天机位见下方专章</small></div>
+      <div class="leg"><span class="ln">🚌 回程巴士</span><span class="arw">→</span><span class="dt">17:50 发 → 19:49 到池袋东口（或 13:46 早回）</span></div>
+      <div class="node">池袋东口<small>步行回酒店</small></div>
+    </div>
+    <p class="small">2 人来回共 ¥8,800。回程不绑定回池袋：也可以坐到新宿，在新宿吃晚饭，再坐山手线约 10 分钟（¥170）回池袋。备选 B 富士回游（新宿发，¥4,200/人）14 日去程已卖完；备选 C 新宿高速巴士。富士日若改期，这一天改走下面 16 日的「秋叶原 → 银座 → 东京站」市区路线——周一美术馆多闭馆，正好排不需要进馆的动漫+购物+灯光日。</p>
+  <div class="dayhead"><span class="d">12月15日 · 周二</span><h3>迪士尼海洋（平日价日）</h3><span class="tag">暂定 · 是否保留未定</span></div>
+    <img class="photo" src="assets/img-027.jpg" alt="东京迪士尼海洋地中海港湾与普罗米修斯火山" loading="lazy" />
+    <p class="small" style="margin-top:0"><strong>迪士尼海洋是什么：</strong>全球唯一的海洋主题迪士尼乐园，中心是冒烟的火山和地中海港湾，全园是水道、港口和复古街景，大人向氛围比陆地乐园浓（机位见下方机位卡）。</p>
+    <div class="route">
+      <div class="node start">Tora Hotel<small>07:30 前出门</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--yamanote)"></i>JR山手线</span><span class="arw">→</span><span class="dt">往东京方向 · 约25分钟 · 约¥230</span></div>
+      <div class="node">东京站<small>站内换京叶线（步行较远，预留10分钟）</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#c9252d"></i>JR京叶线</span><span class="arw">→</span><span class="dt">往苏我方向 · 约15分钟 · 约¥220</span></div>
+      <div class="node">舞浜<small>换度假区单轨电车</small></div>
+      <div class="leg"><span class="ln">🚝 迪士尼度假区线</span><span class="arw">→</span><span class="dt">约10分钟 · 约¥300</span></div>
+      <div class="node">东京迪士尼海洋<small>09:00–21:00</small></div>
+      <div class="leg"><span class="ln">原路返回</span><span class="arw">→</span><span class="dt">闭园后约1小时15分回酒店</span></div>
+      <div class="node">Tora Hotel<small>约22:30 到</small></div>
+    </div>
+    <p class="small">一日票周二平日价 ¥10,900（周日 ¥11,900、周六 ¥12,400），圣诞季活动到 12月25日。热门项目要用官方 App 内的 DPA（付费优先入场）——<strong>只用官方 App，不要找闲鱼代抢 DPA</strong>（小红书实测提醒）。票未订，按官网为准；这一天保不保留还没定。注意：吉卜力美术馆每周二闭馆，15 日去不了，别把吉卜力排这天。</p>
+
+    <div class="dayhead"><span class="d">12月16日 · 周三</span><h3>富士备选日 / 否则：秋叶原 → 银座 → 东京站一番街晚餐</h3><span class="tag red">与14日二选一</span></div>
+    <p class="small" style="margin-top:2px">若 14 日富士已成行，16 日走下面这条市区线，逐段如下；若 14 日天气差，16 日改走富士（巴士同 14 日图；富士回游 16 日 08:30 去、16:48 / 17:41 回还有少量位，¥4,200/人），市区线提前到 14 日走。</p>
+    <div class="route">
+      <div class="node start">Tora Hotel<small>步行到池袋站</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--yamanote)"></i>JR山手线</span><span class="arw">→</span><span class="dt">往上野·东京方向（外环）· 约25分钟 · 约¥220</span></div>
+      <div class="node">秋叶原<small>电器街·动漫周边·午餐</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#89c2e6"></i>日比谷线</span><span class="arw">→</span><span class="dt">往中目黑方向 · 直达约9分钟 · 约¥180</span></div>
+      <div class="node">银座<small>购物·下午茶·傍晚灯光</small></div>
+      <div class="leg"><span class="ln">🚶 步行</span><span class="arw">→</span><span class="dt">经丸之内灯光带步行约15分钟（或丸之内线1站 ¥170）</span></div>
+      <div class="node">东京站<small>丸之内站舍夜景</small></div>
+      <div class="leg"><span class="ln">🍜 站内</span><span class="arw">→</span><span class="dt">东京站一番街晚餐（拉面街/零食街）</span></div>
+      <div class="node">东京站<small>饭后回程</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--marunouchi)"></i>丸之内线</span><span class="arw">→</span><span class="dt">往池袋方向 · 直达约17分钟 · 约¥260</span></div>
+      <div class="node">池袋站<small>步行回酒店</small></div>
+    </div>
+    <p class="small">这一天全程交通约 ¥660/人。秋叶原段提醒：池袋站内有宝可梦中心 Mega Tokyo（阳光城），回程顺路就能逛——其 2026 年营业状态<strong>未核实</strong>，到店前再查。</p>
+    <div class="mini">
+      <figure><img src="assets/img-028.jpg" alt="秋叶原电器街霓虹招牌" loading="lazy" /><figcaption><strong>秋叶原</strong> — 电器街兼动漫圣地，巨型招牌和扭蛋手办店挤满中央通，傍晚亮灯后最有味道。</figcaption></figure>
+      <figure><img src="assets/img-029.jpg" alt="银座和光钟楼路口" loading="lazy" /><figcaption><strong>银座</strong> — 东京最高档的商业街，和光钟楼是地标，傍晚亮灯后最体面。</figcaption></figure>
+      <figure><img src="assets/img-030.jpg" alt="东京站丸之内红砖站舍" loading="lazy" /><figcaption><strong>东京站丸之内站舍</strong> — 1914 年的红砖欧式建筑，广场上拍正脸最经典，站内一番街吃晚饭。</figcaption></figure>
+    </div>
+
+    <div class="dayhead"><span class="d">12月17日 · 周四</span><h3>镰仓 ⇄ 轻井泽 二选一（两种走法都画出来）</h3><span class="tag red">出发前二选一</span></div>
+    <div class="warn"><strong>17日当天换酒店：</strong>先退 Tora（11–17日住 6 晚）再出发；17–19日酒店未定，暂按塔景酒店（东京塔附近）出发，待定下来再更新。下面两种走法的出发与回程站点先按暂定写，酒店定下来后同步改。</div>
+    <p class="small" style="margin-top:2px"><strong>走法 A · 镰仓</strong>（原计划：大佛 + 江之电 + 江之岛）</p>
+    <img class="photo" src="assets/img-031.jpg" alt="镰仓大佛" />
+    <div class="route">
+      <div class="node start">17–19日酒店未定，暂按塔景酒店（东京塔附近）出发，待定下来再更新<small>17日先退 Tora 再出发 · 经池袋站（暂定）</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:var(--jr)"></i>JR湘南新宿线</span><span class="arw">→</span><span class="dt">往逗子方向 · 直达约60分钟 · ¥1,040/单程</span></div>
+      <div class="node">镰仓<small>买江之电一日券 ¥800</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#1a7a4a"></i>江之电</span><span class="arw">→</span><span class="dt">约5分钟</span></div>
+      <div class="node">长谷<small>步行约7分钟到高德院大佛</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#1a7a4a"></i>江之电</span><span class="arw">→</span><span class="dt">约7分钟</span></div>
+      <div class="node">镰仓高校前<small>灌篮高手路口 · 见下方提醒</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#1a7a4a"></i>江之电</span><span class="arw">→</span><span class="dt">约3分钟</span></div>
+      <div class="node">江之岛<small>看海·晚餐</small></div>
+      <div class="leg"><span class="ln">原路返回</span><span class="arw">→</span><span class="dt">江之电回镰仓 + 湘南新宿线（回程站点待新酒店定后更新）</span></div>
+      <div class="node">17–19日未定酒店<small>暂按塔景酒店（东京塔附近）· 晚间到</small></div>
+    </div>
+    <div class="warn"><strong>镰仓高校前路口现在不建议专门去</strong>（小红书实测）：出过事故、现场有人疏导、照片里全是人头；实在要去就 08:00 前到。替代机位：从车站往海边走 2–3 分钟的另一个路口，同样是海 + 江之电 + 路口构图，人少很多——该替代点是否也被管制<strong>未核实</strong>，到现场看情况，不行就退回海边拍。</div>
+    <p class="small" style="margin-top:10px"><strong>走法 B · 轻井泽</strong>（看雪首选：新干线 60–70 分钟直达雪国）</p>
+    <img class="photo" src="assets/img-032.webp" alt="轻井泽雪景" />
+    <div class="route">
+      <div class="node start">17–19日酒店未定，暂按塔景酒店（东京塔附近）出发，待定下来再更新<small>17日先退 Tora 再出发 · 经东京站（暂定）</small></div>
+      <div class="leg"><span class="ln">🚃 前往东京站</span><span class="arw">→</span><span class="dt">具体路线待酒店定下来再更新</span></div>
+      <div class="node">东京站<small>换北陆新干线</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#8a6d1f"></i>北陆新干线</span><span class="arw">→</span><span class="dt">约60–70分钟 · 约¥5,900/人单程（指定席，以官网为准）</span></div>
+      <div class="node">轻井泽<small>南口即王子购物广场</small></div>
+      <div class="leg"><span class="ln">🚶/🚌 站前一带</span><span class="arw">→</span><span class="dt">云场池步行约15分钟 · 白丝瀑布巴士约25分钟 · 石之教堂/旧轻井泽步行圈</span></div>
+      <div class="node">轻井泽站<small>傍晚新干线回东京</small></div>
+      <div class="leg"><span class="ln">原路返回</span><span class="arw">→</span><span class="dt">新干线回东京站后前往新酒店（路线待酒店定后更新）</span></div>
+      <div class="node">17–19日未定酒店<small>暂按塔景酒店（东京塔附近）· 晚间到</small></div>
+    </div>
+    <p class="small">怎么选看「17日看雪之选」一章：东京市区 12 月基本不下雪，想看雪就去轻井泽；想拍海 + 电车 + 大佛就去镰仓。两边不能同一天兼得，前一天晚上定。</p>
+
+    <div class="dayhead"><span class="d">12月18日 · 周五</span><h3>teamLab + 六本木灯光 + 东京塔环线</h3><span class="tag">暂定</span></div>
+    <img class="photo" src="assets/img-033.webp" alt="夜晚的东京塔" />
+    <div class="route">
+      <div class="node start">17–19日酒店未定，暂按塔景酒店（东京塔附近）出发，待定下来再更新<small>出发站点待酒店定后确认</small></div>
+      <div class="leg"><span class="ln">🚃 前往丰洲</span><span class="arw">→</span><span class="dt">具体路线待酒店定下来再更新</span></div>
+      <div class="node">丰洲<small>步行约10分钟（或百合鸥线1站）</small></div>
+      <div class="leg"><span class="ln">🎨 teamLab Planets</span><span class="arw">→</span><span class="dt">新丰洲 · 水区最出片</span></div>
+      <div class="node">丰洲<small>下午出发去六本木</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#80c241"></i>百合鸥线→新桥换大江户线</span><span class="arw">→</span><span class="dt">约35分钟 · 约¥380</span></div>
+      <div class="node">六本木<small>榉坂灯光 · 展望台</small></div>
+      <div class="leg"><span class="ln">🚶 步行环线</span><span class="arw">→</span><span class="dt">东京塔约1小时环线（见机位卡）</span></div>
+      <div class="node">赤羽桥<small>大江户线站</small></div>
+      <div class="leg"><span class="ln">🚃 返回酒店</span><span class="arw">→</span><span class="dt">路线待酒店定下来再更新</span></div>
+      <div class="node">17–19日未定酒店<small>暂按塔景酒店（东京塔附近）</small></div>
+    </div>
+    <p class="small">teamLab 选 Planets 还是 Borderless（麻布台，神谷町站）还没定：Planets ¥3,800 起、无现场票，必须网上订；Borderless ¥3,400 起、动态价最高约 ¥5,800。都未订票，按官网为准。天气差的保底方案：把这天换成新宿东京都厅免费展望台（见机位卡）。</p>
+    <div class="mini">
+      <figure><img src="assets/img-034.jpg" alt="teamLab沉浸式光影展厅" loading="lazy" /><figcaption><strong>teamLab</strong> — 沉浸式数字艺术美术馆，人站在光影和水里成剪影，全程出片率最高的室内点。</figcaption></figure>
+      <figure><img src="assets/img-035.jpg" alt="六本木榉坂灯饰与东京塔" loading="lazy" /><figcaption><strong>六本木榉坂灯光</strong> — 两排灯树收拢、尽头正对东京塔，是东京冬天最有名的灯光构图。</figcaption></figure>
+      <figure><img src="assets/img-036.jpg" alt="东京都厅双塔大楼夜景" loading="lazy" /><figcaption><strong>东京都厅</strong> — 新宿双塔大楼，45 楼展望室免费，天气差时用它保底看夜景和富士山方向。</figcaption></figure>
+    </div>
+
+    <div class="dayhead"><span class="d">12月19日 · 周六</span><h3>退房 · 称行李 · 去成田 → 香港</h3><span class="tag red">已订航班</span></div>
+    <div class="route">
+      <div class="node start">17–19日酒店未定，暂按塔景酒店（东京塔附近）出发，待定下来再更新<small>10:00 退房 · 行李先称重</small></div>
+      <div class="leg"><span class="ln">🧳 上午</span><span class="arw">→</span><span class="dt">酒店附近补买手信 · 行李寄存在酒店/站内柜 · 约15:00 出发去机场（前往日暮里的路线待酒店定后更新）</span></div>
+      <div class="node">日暮里<small>换 Skyliner</small></div>
+      <div class="leg"><span class="ln"><i class="dot" style="background:#00418e"></i>Skyliner</span><span class="arw">→</span><span class="dt">约36–41分钟</span></div>
+      <div class="node">成田机场 T3<small>17:00–17:30 到 · 值机</small></div>
+      <div class="leg"><span class="ln">✈ Jetstar Japan GK027</span><span class="arw">→</span><span class="dt">19:30 起飞 · 行李每人托运20kg · 手提+个人物品合计7kg</span></div>
+      <div class="node">香港机场<small>23:45 落地 · 打车去木的地（佐敦），见下方「香港」章</small></div>
+    </div>
+    <div class="warn"><strong>行李是今天最大的坑：</strong>GK027 每人托运限 <strong>20kg</strong>（去程澳门飞东京那段是每人 32kg，两段的限额不一样）。出发前在酒店先把两个箱子都称一遍，超重在机场买是 <strong>¥2,000/kg</strong>，提前网上加购便宜得多——称完再决定要不要加购，不要到柜台才发现。</div>
+  </section>
+
+  <section id="fuji">
+    <h2><span class="no">专章</span>富士山：先看天气，再选湖，再跑机位</h2>
+    <p class="sub">主选 12月14日（周一），备选 12月16日（周三）。12 月是富士山最清晰的季节之一，但河口湖的红叶已经没了——别按秋天的照片找景。</p>
+
+    <div class="warn">
+      <strong>天气自查（只在这几天查，不是每天查）：</strong>看 <a href="https://isfujivisible.com/zh" target="_blank" rel="noopener">Is Fuji Visible（isfujivisible.com/zh）</a>北侧上午/下午能见度评分（1–10 分）：<strong>8–10 分就去；6–7 分只拍早上；≤5 分考虑换天</strong>。14 日的预报 12月4日进入 10 天预报范围，16 日的 12月6日进入；追踪只在 <strong>12月4日、6日、11日、12日</strong>查，最终 11–12 日拍板哪天去。
+    </div>
+
+    <h3>富士五湖是五个不同的角度，别只盯着河口湖站</h3>
+    <div class="grid three">
+      <div class="card"><strong>河口湖</strong> — 最经典、最方便，巴士直达，机位密度最高，第一次去的主场。</div>
+      <div class="card"><strong>山中湖</strong> — 五湖里最大、最远、湖面最宽，适合日落，有天鹅。</div>
+      <div class="card"><strong>本栖湖</strong> — 最安静，湖水透明度最高，千元纸币的取景地。</div>
+      <div class="card"><strong>西湖</strong> — 森林和树海环绕，开发最少，根场茅草屋聚落在这一带。</div>
+      <div class="card"><strong>精进湖</strong> — 最小，所以构图最集中、最干净，「子抱富士」在这里。</div>
+      <div class="card"><strong>富士吉田市区</strong> — 不是湖，是街景富士：本町通、金鸟居、天空鸟居都在这一侧，和湖边机位是两种味道。</div>
+    </div>
+    <p class="small">交通备选回顾：A 池袋直达巴士（主选，见 14 日图）；B 富士回游 新宿 08:30 → 河口湖 10:26、回程 16:48，¥4,200/人（14 日去程已卖完，16 日还有少量位）；C 新宿高速巴士，班次最多。周边顺路：富士急乐园在富士急行线沿线（过山车 + 富士山同框的方向），忍野八海在河口湖往山中湖的巴士线上。</p>
+
+    <h3>16 个机位（站哪里 · 朝哪拍 · 几点去）</h3>
+
+    <div class="spot"><h4><span class="n">01</span>Lawson 河口湖站前店</h4>
+      <img class="spotimg" src="assets/img-037.jpg" alt="Lawson便利店与身后的富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>便利店 + 富士山的网红同框点：蓝色 Lawson 招牌压在画面下方，雪顶富士正好立在店后，是河口湖站旁最顺手的第一张。</dd>
+      <dt>站位/朝向</dt><dd>河口湖站出站步行不到 5 分钟，站到店门侧边的人行道，镜头越过店招牌朝富士山。</dd>
+      <dt>构图</dt><dd>便利店蓝白招牌做下半幅，富士山压在店后上方。</dd>
+      <dt>最佳时间</dt><dd>小红书实测清晨 07:00 前人最少；乘 09:05 巴士到达的话，09:10–09:30 是到站后的相对少人窗口。不用为它 05:00/06:00 专门跑一趟。</dd>
+      <dt>费用</dt><dd>免费；买瓶饮料再拍更自然。</dd>
+      <dt>坑</dt><dd>这是营业中的店铺门口，别堵门、别站车道，人多时店员会劝离。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">02</span>忠灵塔（新仓山浅间公园）</h4>
+      <img class="spotimg" src="assets/img-001.webp" alt="忠灵塔五重塔与富士山同框" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>五重塔与富士山的经典同框：新仓山半山的神社公园，红塔、富士、市街三层叠在一起，是富士吉田最有代表性的一幅。</dd>
+      <dt>站位/朝向</dt><dd>爬上展望台，站在塔的右前方平台，朝西北把五重塔和富士山放进同一幅。</dd>
+      <dt>构图</dt><dd>塔占右侧三分之一，富士居中，山下是富士吉田市街。</dd>
+      <dt>最佳时间</dt><dd>07:00–09:00（小红书实测），光顺、人少；下午逆光。</dd>
+      <dt>怎么去</dt><dd>河口湖站乘富士急行线普通车 08:03 → 下吉田 08:17（¥310），再步行约 25 分钟 + 398 级台阶。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>台阶冬天可能结霜打滑，预留体力；12 月没有樱花和红叶，画面靠塔和雪顶富士本身。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">03</span>本町通 · 日川时钟店</h4>
+      <img class="spotimg" src="assets/img-038.jpg" alt="本町通商店街尽头的富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>商店街尽头正对富士山的老街景：昭和风招牌沿街收向画面中央的大山，是富士吉田市区最出名的街景机位。</dd>
+      <dt>站位/朝向</dt><dd>下吉田站往南步行 5–9 分钟到本町通，站在时钟店斜对面的人行道端头，沿街道朝富士山方向拍。</dd>
+      <dt>构图</dt><dd>商店街两侧招牌形成纵深，富士山正压在街道尽头中央。</dd>
+      <dt>最佳时间</dt><dd>10:00 前，或 16:00–17:00（小红书实测）。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>这是正常通车的马路，只能站在人行道和路口端头拍，不要站到路中央。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">04</span>金鸟居</h4>
+      <img class="spotimg" src="assets/img-039.jpg" alt="金鸟居框住富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>路口上的金色大鸟居，正对富士山：原本是登山道入口的标记，现在成了用鸟居做画框拍富士的街口机位。</dd>
+      <dt>站位/朝向</dt><dd>从本町通继续往南步行 10 分钟以上到金鸟居路口，站在鸟居侧后方的人行道角，透过鸟居朝富士山拍。</dd>
+      <dt>构图</dt><dd>金色鸟居做画框，富士山落在框的正中。</dd>
+      <dt>最佳时间</dt><dd>上午顺光，和本町通连着拍。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>路口车流大，只在人行道范围内取景，别为了正角度退到车道上。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">05</span>富士山站 Q-STA 6 楼天台</h4>
+      <img class="spotimg" src="assets/img-040.jpg" alt="富士吉田市街屋顶与富士山全景" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>商场天台的无遮挡观景点：站在富士山站楼顶，前景是整片富士吉田市街屋顶，富士山完整压在城市后方（图为富士吉田市街看富士的角度）。</dd>
+      <dt>站位/朝向</dt><dd>富士山站直结的 Q-STA 商场 6 楼天台，站在栏杆正中朝富士山拍。</dd>
+      <dt>构图</dt><dd>无遮挡的富士全景，前景是富士吉田市街屋顶。</dd>
+      <dt>最佳时间</dt><dd>天台开放 08:30–19:45，上午或傍晚都行，适合排在本町通之后顺路。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>山顶风大、天台开放以商场当天公告为准；这是市区制高点，拍的是「城市 + 富士」，不是湖景。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">06</span>大石公园</h4>
+      <img class="spotimg" src="assets/img-041.jpg" alt="大石公园花坛湖面与富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>河口湖北岸的湖畔花园公园：隔湖正对富士山，花坛、湖面、山三层构图，是河口湖最稳的湖景机位之一。</dd>
+      <dt>站位/朝向</dt><dd>河口湖北岸公园，站在湖岸步道花坛后，隔湖朝南看富士山。</dd>
+      <dt>构图</dt><dd>前景花坛、中景湖面、远景富士，三层叠起来。</dd>
+      <dt>最佳时间</dt><dd>上午，湖面较平静。</dd>
+      <dt>怎么去</dt><dd>河口湖站乘红线周游巴士约 27 分钟（¥570）到大石公园站。</dd>
+      <dt>费用</dt><dd>入园免费。</dd>
+      <dt>坑</dt><dd>12 月没有薰衣草、扫帚草也过了季，前景以枯草和湖岸为主，预期要放低；风大时没有倒影。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">07</span>产屋崎</h4>
+      <img class="spotimg" src="assets/img-042.jpg" alt="河口湖富士山倒影" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>伸进河口湖的小半岛：岸边岩石和静水面适合拍富士倒影，是北岸最安静的清晨机位（图为河口湖倒影的角度）。</dd>
+      <dt>站位/朝向</dt><dd>河口湖北岸产屋崎半岛，站在湖边步道和岩石旁，朝南隔湖看富士山。</dd>
+      <dt>构图</dt><dd>近景湖石、中景平静湖面、远景富士倒影。</dd>
+      <dt>最佳时间</dt><dd>只适合早上约 07:00——无风时才有倒影，起风就散。</dd>
+      <dt>怎么去</dt><dd>红线周游巴士到产屋崎一带下车步行；从河口湖站出发要赶早班车，或前一晚住湖边才稳。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>12 月河口湖清晨气温可到 −5 ~ −10°C，保暖按最冷算；和 09:05 才到的巴士行程冲突，想拍这个点要单独早起安排。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">08</span>天上山缆车（卡奇卡奇山）</h4>
+      <img class="spotimg" src="assets/img-043.jpg" alt="天上山缆车俯瞰河口湖与富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>缆车登高的全景展望台：几分钟升到山顶，河口湖在脚下、富士山在对面，一次看全湖与山。</dd>
+      <dt>站位/朝向</dt><dd>坐缆车到山顶站展望台，站在栏杆前俯瞰：河口湖在脚下，富士山在对面。</dd>
+      <dt>构图</dt><dd>高处全景，湖面做下半幅，富士居中偏上。</dd>
+      <dt>最佳时间</dt><dd>上午，云还没升起来之前。</dd>
+      <dt>怎么去</dt><dd>河口湖站步行约 10 分钟到缆车下站，或红线巴士 1 站。</dd>
+      <dt>费用</dt><dd>往返 ¥1,200（2026年11月1日起涨价，以官网为准）。</dd>
+      <dt>坑</dt><dd>晴天排队久，先上山再去大石公园更顺；山顶风大，停留时间别排太满。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">09</span>河口浅间神社 · 天空鸟居</h4>
+      <img class="spotimg" src="assets/img-044.jpg" alt="天空鸟居与富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>河口浅间神社后山遥拜所的鸟居：孤立在山坡上正对富士山，用鸟居框住整座山，是河口湖一带最有仪式感的机位。</dd>
+      <dt>站位/朝向</dt><dd>神社后山遥拜所，站在鸟居正前方的台阶下，透过鸟居朝富士山拍。</dd>
+      <dt>构图</dt><dd>鸟居框景，富士山落在框内正中，下方是河口湖一角。</dd>
+      <dt>最佳时间</dt><dd>上午；下午容易起云遮山。</dd>
+      <dt>怎么去</dt><dd>河口湖站乘巴士约 10 分钟到「河口局前」（¥350），下车后爬山约 30 分钟。</dd>
+      <dt>费用</dt><dd>¥100 香油钱（维护性质）。</dd>
+      <dt>坑</dt><dd>最后一段是山路，穿好走的鞋；这里拍的是「鸟居 + 富士」，别指望同时看到大湖面。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">10</span>山中湖 · 平野之滨</h4>
+      <img class="spotimg" src="assets/img-045.jpg" alt="山中湖天鹅与富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>山中湖东岸的开阔湖滨：湖面宽、天鹅常来，隔着大湖看富士，是五湖里最舒展的日出日落点。</dd>
+      <dt>站位/朝向</dt><dd>山中湖东岸平野地区湖滨，站在湖边步道上朝西隔湖看富士山。</dd>
+      <dt>构图</dt><dd>宽湖面打底，天鹅游进画面做前景，富士在远处正中。</dd>
+      <dt>最佳时间</dt><dd>日出、日落都可，最佳 06:00–09:00。</dd>
+      <dt>怎么去</dt><dd>河口湖站乘巴士往御殿场方向约 40–50 分钟，班次少，先查时刻表。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>五湖里离河口湖最远，错过一班巴士等很久；天鹅是野生的，别追、别喂。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">11</span>山中湖 · 长池亲水公园</h4>
+      <img class="spotimg" src="assets/img-046.jpg" alt="山中湖日落与富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>山中湖北岸的亲水公园：栈道伸进宽湖面，富士和倒影上下对称，日落时山正落在画面中央（图为山中湖日落的角度）。</dd>
+      <dt>站位/朝向</dt><dd>山中湖北岸长池地区公园，站在湖岸栈道上朝西看富士山。</dd>
+      <dt>构图</dt><dd>湖面最宽的一段，富士和倒影上下对称；日落时山正落在画面中央。</dd>
+      <dt>最佳时间</dt><dd>清晨 06:00–09:00 拍倒影，或日落前 1 小时到日落。</dd>
+      <dt>怎么去</dt><dd>巴士到「长池亲水公园前」一带下车。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>12 月日落约 16:30，回程巴士末班早，去之前把回程时刻先查好。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">12</span>本栖湖 · 中之仓峠</h4>
+      <img class="spotimg" src="assets/img-047.jpg" alt="本栖湖与富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>本栖湖西侧山上的观景台：爬高后隔湖看富士的角度和千元纸币背面相同，画面干净没有建筑（图为本栖湖看富士的角度）。</dd>
+      <dt>站位/朝向</dt><dd>本栖湖西侧中之仓峠的 5 层观景台（海拔约 1,082 米），站到顶层隔湖朝富士山拍——千元纸币背面就是这个角度。</dd>
+      <dt>构图</dt><dd>湖面占下半幅，富士居中，画面干净没有建筑。</dd>
+      <dt>最佳时间</dt><dd>上午，湖面最静、透明度最好。</dd>
+      <dt>怎么去</dt><dd>河口湖站乘蓝线巴士到本栖湖，再爬山约 30 分钟——机位不在湖边，在山上。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>只走到湖边是拍不到这个角度的，必须爬山，预留体力和时间。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">13</span>精进湖 · 子抱富士</h4>
+      <img class="spotimg" src="assets/img-048.jpg" alt="精进湖子抱富士" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>五湖里最小的湖：大室山正抱在富士山前方，叫「子抱富士」，小湖面让构图最集中。</dd>
+      <dt>站位/朝向</dt><dd>精进湖南岸湖边，站在岸边道路旁的观景位朝东南看：大室山抱在富士山正前方。</dd>
+      <dt>构图</dt><dd>小湖面 + 前景大室山 + 后景富士，三层叠景，画面最集中。</dd>
+      <dt>最佳时间</dt><dd>下午 14:00 到日落最好。</dd>
+      <dt>怎么去</dt><dd>河口湖站乘蓝线巴士到精进湖。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>蓝线末班约 17:00 后就没车回河口湖——不要只靠公交等日落，先算好末班时间，否则要叫出租车回。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">14</span>西湖 · 根场（いやしの里）</h4>
+      <img class="spotimg" src="assets/img-049.jpg" alt="西湖根场茅草屋与富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>西湖畔的茅草屋古村落聚落：老屋顶做前景、富士山升在屋后，是五湖里最有田园味的一幅。</dd>
+      <dt>站位/朝向</dt><dd>西湖西岸茅草屋聚落，走到聚落高处的展望点，朝富士山方向拍。</dd>
+      <dt>构图</dt><dd>茅草屋顶做前景，富士山升在屋顶后方。</dd>
+      <dt>最佳时间</dt><dd>上午。</dd>
+      <dt>怎么去</dt><dd>河口湖站乘蓝线/绿线方向巴士约 30 分钟。</dd>
+      <dt>费用</dt><dd>入村约 ¥500（以现场为准）。</dd>
+      <dt>坑</dt><dd>聚落周边是树海边缘，步道只走有标记的路线，不要自己钻林子。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">15</span>忍野八海</h4>
+      <img class="spotimg" src="assets/img-050.jpg" alt="忍野八海清澈涌泉池" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>富士山雪融水涌出的泉池村落：八个清澈见底的小池散在村子里，池水做前景、富士在远处。</dd>
+      <dt>站位/朝向</dt><dd>忍野村涌泉池群，站在中池、涌池边的木栈道上，以池水为前景朝远处富士山拍。</dd>
+      <dt>构图</dt><dd>清澈池水和水草做下半幅，富士在背景中央。</dd>
+      <dt>最佳时间</dt><dd>上午 10:00 前，旅行团还没到、光也顺。</dd>
+      <dt>怎么去</dt><dd>河口湖站乘巴士约 25 分钟（往御殿场/山中湖方向），可与山中湖排在同一条线上。</dd>
+      <dt>费用</dt><dd>村子免费进入，个别池和资料馆另收费。</dd>
+      <dt>坑</dt><dd>10 点后旅行团涌入，池边人挤人；不要往池里投币、喂鱼。</dd></dl></div>
+
+    <div class="spot"><h4><span class="n">16</span>富士梦大桥 + 富士市 7-Eleven（远征备选）</h4>
+      <img class="spotimg" src="assets/img-051.jpg" alt="富士山梦大桥道路尽头的富士山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd>静冈富士市的公路大桥：笔直的桥面道路一路收向富士山，是南侧远征才拍得到的道路纵深机位。</dd>
+      <dt>站位/朝向</dt><dd>静冈县富士市的富士山梦大桥，站在桥侧人行道的观景段，沿桥面道路的纵深朝富士山拍；桥下不远处的 7-Eleven 门口是同款路边机位。</dd>
+      <dt>构图</dt><dd>道路引导线一路收向富士山，山压在路的正上方。</dd>
+      <dt>最佳时间</dt><dd>清晨车少、空气透的时候。</dd>
+      <dt>怎么去</dt><dd>不在河口湖一带：从东京或河口湖过去都要 2 小时以上，只能单独排半天到一天。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>不要和河口湖机位硬凑在同一天；桥上只在人行道停留，别下到车行道。</dd></dl></div>
+  </section>
+
+  <section id="snow">
+    <h2><span class="no">抉择</span>12月17日：镰仓还是轻井泽</h2>
+    <p class="sub">先说清一个事实：<strong>东京市区 12 月基本不下雪</strong>——平均只有 0.6 天下雪、0.1 天积雪，指望在市区等雪不现实。想看雪，就得当天往山里走。</p>
+    <div class="grid two">
+      <div class="card">
+        <h3 style="margin-top:0">轻井泽（看雪首选）</h3>
+        <ul class="tight">
+          <li><strong>走法：</strong>东京站乘北陆新干线 60–70 分钟直达（图见 17 日出行图 B）。</li>
+          <li><strong>云场池：</strong>站前步行约 15 分钟，池面倒影 + 雪岸，清晨最静。</li>
+          <li><strong>白丝瀑布：</strong>站前巴士约 25 分钟，瀑布帘幕配雪林，下车步行一小段。</li>
+          <li><strong>石之教堂 / 高原教会：</strong>星野一带，石头与玻璃的教堂藏在雪林里，顺路看外观和周边。</li>
+          <li><strong>旧轻井泽银座通：</strong>老街小店和吃的，适合午后慢慢逛。</li>
+          <li><strong>王子购物广场：</strong>就在车站南口，返程前购物、吃饭都方便。</li>
+          <li><strong>适合选它如果：</strong>这趟最想拍到雪景，且前几天东京和富士都没见到雪。</li>
+        </ul>
+        <div class="mini" style="grid-template-columns:1fr">
+          <figure><img src="assets/img-052.jpg" alt="轻井泽云场池倒影" loading="lazy" /><figcaption><strong>云场池</strong> — 小湖池塘，池面像镜子一样映着两岸树林，有雪时岸边一圈白，是轻井泽最安静的一张。</figcaption></figure>
+          <figure><img src="assets/img-053.jpg" alt="轻井泽白丝瀑布" loading="lazy" /><figcaption><strong>白丝瀑布</strong> — 宽幅的地下水瀑布像白丝帘幕一样从岩壁垂下，配上雪林，是轻井泽的标志自然景。</figcaption></figure>
+          <figure><img src="assets/img-054.jpg" alt="轻井泽石之教堂石拱" loading="lazy" /><figcaption><strong>石之教堂</strong> — 石头和玻璃交叠的拱形教堂，藏在星野的林子里，冬天配雪最有氛围。</figcaption></figure>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">镰仓（原计划）</h3>
+        <ul class="tight">
+          <li><strong>走法：</strong>JR 湘南新宿线直达约 60 分钟，¥1,040/单程；江之电一日券 ¥800（图见 17 日出行图 A）。17日当天先退 Tora 再出发，当晚住 17–19日未定酒店。</li>
+          <li><strong>高德院大佛：</strong>长谷站步行约 7 分钟，露天大佛是镰仓的标志画面。</li>
+          <li><strong>江之电：</strong>沿海小火车本身就是景点，长谷—镰仓高校前—江之岛一段贴着海开。</li>
+          <li><strong>镰仓高校前：</strong>灌篮高手路口现在不建议专门去（见 17 日图下提醒），用海边替代路口拍同款构图。</li>
+          <li><strong>江之岛：</strong>过桥上岛看海、吃海鲜，天气好时岛上能远望富士山。</li>
+          <li><strong>适合选它如果：</strong>更想拍海 + 电车 + 大佛，或者轻井泽当天天气也差。</li>
+        </ul>
+        <div class="mini" style="grid-template-columns:1fr">
+          <figure><img src="assets/img-031.jpg" alt="镰仓高德院大佛" loading="lazy" /><figcaption><strong>镰仓大佛</strong> — 高德院的露天青铜大佛，高约 11 米，坐在树林前的台座上，是镰仓最有代表性的一张。</figcaption></figure>
+          <figure><img src="assets/img-055.jpg" alt="江之电沿海行驶" loading="lazy" /><figcaption><strong>江之电</strong> — 绿色小火车贴着湘南海岸开，车厢、海和民居同框，本身就是镰仓的风景。</figcaption></figure>
+          <figure><img src="assets/img-056.jpg" alt="江之岛与海蜡烛展望灯塔" loading="lazy" /><figcaption><strong>江之岛</strong> — 海上的小岛，白色展望灯塔是标志，岛上吃海鲜、看海，天气好时能远望富士山。</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <div class="warn"><strong>另外两个雪选项为什么不选：</strong>GALA 汤泽 12月12–18日只开缆车观光、雪道 19 日才开——我们 19 日就走了，赶不上滑雪，只看缆车不值得专程跑。<strong>日光</strong>（东照宫 + 中禅寺湖一带）留作备选：轻井泽和镰仓都因天气黄了的时候再考虑，不提前占日子。</div>
+  </section>
+
+  <section id="spots">
+    <h2><span class="no">机位卡</span>东京其他景点：站哪里、朝哪拍</h2>
+    <p class="sub">每张卡先看图和介绍认地方，再看机位：站位、朝向、构图、最佳时间、去法、费用和坑。对应哪一天走，看每日出行图。镰仓大佛、江之岛、轻井泽的图和介绍在「17日看雪之选」一章。</p>
+
+    <div class="spot"><h4>浅草寺 / 雷门</h4>
+      <img class="spotimg" src="assets/img-021.webp" alt="浅草寺雷门大灯笼" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>古寺 · 东京最古老的寺庙。</strong>朱红的雷门大灯笼是东京最有名的门面，穿过仲见世商店街就是宝藏门和本堂。看点是江户下町的老东京气氛：人力车、和服游客和老铺点心都在这一片，第一次来东京先来这里认门。</dd>
+      <dt>站位/朝向</dt><dd>站在雷门正对面马路对岸的人行道，朝北拍雷门大灯笼全貌；进仲见世后回头拍一次雷门背面人流。</dd>
+      <dt>构图</dt><dd>灯笼居中、门框对称；往里走以五重塔和宝藏门做第二幅。</dd>
+      <dt>最佳时间</dt><dd>09:00 前到，人少光顺；夜里亮灯后人少又是另一幅。</dd>
+      <dt>去法</dt><dd>银座线/浅草线浅草站，出站即达（见 12 日图）。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>10 点后仲见世挤到走不动；寺内参拜区不要挡参道正中拍照。</dd></dl></div>
+
+    <div class="spot"><h4>东京晴空塔</h4>
+      <img class="spotimg" src="assets/img-022.jpg" alt="东京晴空塔与城市天际线" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>电视塔 · 东京最高地标。</strong>634 米的塔身在全城很多角落都能看见，上塔后是 360 度城市全景，日落时能同时看到市中心灯火和富士山方向。塔下是商场和水族馆，适合和浅草连成一天。</dd>
+      <dt>站位/朝向</dt><dd>上塔：天望甲板站在朝西的玻璃面，日落时富士山方向和市中心同框。塔下：十间桥一带河边是拍塔倒影的经典站位。</dd>
+      <dt>构图</dt><dd>塔上拍「日落 + 城市灯火渐亮」；塔下拍塔身 + 河面倒影竖构图。</dd>
+      <dt>最佳时间</dt><dd>日落前 45 分钟上塔，一次看日落和夜景两段。</dd>
+      <dt>去法</dt><dd>押上站直结（见 12 日图）。</dd>
+      <dt>费用</dt><dd>天望甲板 ¥1,800 起、套票 ¥3,000 起，网上订比现场便宜约 ¥500（未订票，按官网为准）。</dd>
+      <dt>坑</dt><dd>周末和节假日现场排队久；能见度差的日子上塔只看到灰，别硬上。</dd></dl></div>
+
+    <div class="spot"><h4>明治神宫</h4>
+      <img class="spotimg" src="assets/img-024.jpg" alt="明治神宫森林参道大鸟居" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>神社 · 藏在市中心森林里的神社。</strong>供奉明治天皇，整片镇守之森有约十万棵树，一进大鸟居就像走进山里，城市噪音立刻没了。看点是高大的鸟居、南参道的酒桶墙和安静的林间参道。</dd>
+      <dt>站位/朝向</dt><dd>从原宿站侧大鸟居进，站在参道中段回望鸟居；正殿前广场站在侧边拍屋顶曲线，不要正挡参拜队列。</dd>
+      <dt>构图</dt><dd>鸟居 + 两侧高大林木的纵深。</dd>
+      <dt>最佳时间</dt><dd>上午，林子里光斑最好、人也少。</dd>
+      <dt>去法</dt><dd>副都心线明治神宫前站 / JR 原宿站（见 13 日图）。</dd>
+      <dt>费用</dt><dd>免费（宝物殿等另收费）。</dd>
+      <dt>坑</dt><dd>神宫是参拜场所，殿内区域禁止拍照的标识要遵守。</dd></dl></div>
+
+    <div class="spot"><h4>原宿</h4>
+      <img class="spotimg" src="assets/img-025.jpg" alt="原宿竹下通彩色街景" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>潮流街区 · 年轻人的街。</strong>竹下通一条窄街挤满可丽饼、古着和彩色小店，表参道则是大牌旗舰店的建筑大道。从明治神宫出来步行就到，和神宫的安静正好是两个世界，适合下午逛吃拍照。</dd>
+      <dt>站位/朝向</dt><dd>竹下通站在街口朝里拍人流和招牌纵深；表参道站在路口拍旗舰店建筑立面。</dd>
+      <dt>构图</dt><dd>竹下通拍密集招牌 + 人流；表参道拍建筑和行道树。</dd>
+      <dt>最佳时间</dt><dd>下午，店铺全开、街上最热闹。</dd>
+      <dt>去法</dt><dd>副都心线明治神宫前站 / JR 原宿站（见 13 日图）。</dd>
+      <dt>费用</dt><dd>逛街免费。</dd>
+      <dt>坑</dt><dd>周末竹下通挤满人，拍照绕主街走小巷更顺。</dd></dl></div>
+
+    <div class="spot"><h4>涩谷 Sky</h4>
+      <img class="spotimg" src="assets/img-026.jpg" alt="涩谷Sky屋顶展望台日落" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>露天展望台 · 涩谷站楼顶。</strong>站在约 229 米高的屋顶边缘，脚下就是涩谷十字路口，晴天能远望富士山。看点是一张票看三段：白天全景、冬日日落、入夜灯海，是这趟最值得提前抢票的展望台；楼下的十字路口夜景见 13 日图里的照片。</dd>
+      <dt>站位/朝向</dt><dd>屋顶展望台先站朝西的一侧看日落，再绕到朝南/朝东看涩谷十字路口和城市灯海；网红扶梯和屋顶边缘角位要排队等。</dd>
+      <dt>构图</dt><dd>日落：太阳落在远山和楼群之间；入夜：十字路口车流 + 广告屏做下半幅。</dd>
+      <dt>最佳时间</dt><dd><strong>15:00 进场</strong>（小红书实测）：看 16:00 左右冬日日落，再留下来看灯，一票三段。</dd>
+      <dt>去法</dt><dd>涩谷站直结 Shibuya Scramble Square（见 13 日图）。</dd>
+      <dt>费用</dt><dd>¥2,700（10:00–14:59）/ ¥3,400（15:00 后），提前 14 天 00:00 JST 开售，日落场最先卖完，进场带护照原件（未订票，按官网为准）。</dd>
+      <dt>坑</dt><dd>屋顶风大且冷，12 月要穿够；大包和部分物品要存柜，不能带上屋顶。</dd></dl></div>
+
+    <div class="spot"><h4>秋叶原</h4>
+      <img class="spotimg" src="assets/img-028.jpg" alt="秋叶原电器街霓虹招牌" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>电器街 · 动漫圣地。</strong>中央通两边全是电器量贩、扭蛋、手办和女仆咖啡的巨型招牌，傍晚亮灯后最有味道。看点是整条街的招牌纵深和店里的货架密度，逛店为主、街景为辅。</dd>
+      <dt>站位/朝向</dt><dd>中央通与电器街路口站在人行道角，朝北拍招牌林立的主街；傍晚亮灯后从天桥/路口斜角再拍一次。</dd>
+      <dt>构图</dt><dd>竖招牌 + 车流的纵深街景；店内以货架和手办墙做近景。</dd>
+      <dt>最佳时间</dt><dd>下午到傍晚：白天逛店，亮灯后拍街景。</dd>
+      <dt>去法</dt><dd>JR 山手线秋叶原站电器街口（见 16 日图）。</dd>
+      <dt>费用</dt><dd>逛街免费，扭蛋和周边另算。</dd>
+      <dt>坑</dt><dd>周日中央通是步行者天国、车辆禁行，工作日则正常通车，站位要跟着变；店内拍照先看标识。</dd></dl></div>
+
+    <div class="spot"><h4>银座 / 丸之内灯光</h4>
+      <img class="spotimg" src="assets/img-029.jpg" alt="银座和光钟楼路口" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>高档商业街 · 灯光大道。</strong>银座是东京最高档的商业街，和光钟楼是路口地标，两侧是大牌旗舰店和老牌百货；丸之内一侧是红砖东京站和灯带仲通（见下一张卡）。两边步行相连，适合排一个傍晚慢慢走。</dd>
+      <dt>站位/朝向</dt><dd>银座：站在四丁目路口（和光钟楼对角）朝钟楼拍。丸之内：站在东京站丸之内站舍正对面的广场，朝西拍站舍全貌，再沿仲通往有乐町方向拍灯带。</dd>
+      <dt>构图</dt><dd>银座拍钟楼 + 路口车流；丸之内拍红砖站舍对称正脸 + 两侧灯树。</dd>
+      <dt>最佳时间</dt><dd>日落后蓝调时刻（约 17:00 前后）到晚上，灯刚亮、天还没全黑最好。</dd>
+      <dt>去法</dt><dd>银座站/有乐町站，丸之内在东京站（见 16 日图）。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>丸之内仲通灯饰人多，拍站舍正脸要退到广场边缘才装得下全幅；灯饰带人多，找人流间隙拍，别长时间占着路口正中。</dd></dl></div>
+
+    <div class="spot"><h4>东京站丸之内站舍</h4>
+      <img class="spotimg" src="assets/img-030.jpg" alt="东京站丸之内红砖站舍" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>红砖站舍 · 丸之内的门面。</strong>1914 年的欧式红砖建筑正对皇居方向的大道，广场上拍正脸最经典；站内一番街是拉面和手信的集合地，16 日晚餐就排在这里。傍晚蓝调时刻站舍亮灯，和两侧高楼灯带一起拍层次最好。</dd>
+      <dt>站位/朝向</dt><dd>站在站前广场中央朝西拍站舍对称正脸，再沿仲通往有乐町方向拍灯带。</dd>
+      <dt>构图</dt><dd>红砖站舍居中、两侧现代高楼做框，广场地面带前景。</dd>
+      <dt>最佳时间</dt><dd>日落后蓝调时刻到晚上。</dd>
+      <dt>去法</dt><dd>东京站丸之内口（见 16 日图）。</dd>
+      <dt>费用</dt><dd>免费。</dd>
+      <dt>坑</dt><dd>广场人多，拍全幅要退到广场边缘；站内一番街饭点排队，预留时间。</dd></dl></div>
+
+    <div class="spot"><h4>迪士尼海洋</h4>
+      <img class="spotimg" src="assets/img-027.jpg" alt="东京迪士尼海洋地中海港湾与普罗米修斯火山" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>主题乐园 · 全球唯一的海洋主题迪士尼。</strong>中心是冒烟的普罗米修斯火山和地中海港湾，园区全是水道、港口和复古街景，大人向的氛围比陆地乐园浓。看点是港湾全景和夜间水面灯光，项目和拍照各占一半时间。</dd>
+      <dt>站位/朝向</dt><dd>进园先到地中海港湾对岸，朝火山（普罗米修斯火山）拍全景；夜里回到港湾看水面倒影和灯光秀站位。</dd>
+      <dt>构图</dt><dd>火山 + 港湾水面上下对称；美国海滨一带拍复古街景和达菲墙。</dd>
+      <dt>最佳时间</dt><dd>开园首小时拍空景，闭园前 1 小时拍夜景。</dd>
+      <dt>去法</dt><dd>舞浜站换度假区单轨电车（见 15 日图）。</dd>
+      <dt>费用</dt><dd>一日票周二 ¥10,900（未订票，按官网为准）。</dd>
+      <dt>坑</dt><dd>热门项目用官方 App 内 DPA，<strong>不要用闲鱼代抢</strong>（小红书实测提醒）；入园先抢热门项目时段，再慢慢逛拍。</dd></dl></div>
+
+    <div class="spot"><h4>teamLab（Planets / Borderless 二选一）</h4>
+      <img class="spotimg" src="assets/img-034.jpg" alt="teamLab沉浸式光影展厅" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>数字艺术美术馆 · 沉浸式展览。</strong>Planets 要赤脚走进齐膝的水里，光影和倒影包住整个人；Borderless 是房间之间没有边界的光影迷宫。看点就是人站在光里成剪影，出片率是全程最高的一类室内点。</dd>
+      <dt>站位/朝向</dt><dd>Planets：<strong>水区最出片</strong>（小红书实测）——站在齐膝的水里朝光影流动的方向拍人像和倒影；花房和瀑布区顺路拍。Borderless 则以无边界光影房间为主，站房间对角拍纵深。</dd>
+      <dt>构图</dt><dd>人站在光影中间做剪影，水面/镜面倒影占下半幅。</dd>
+      <dt>最佳时间</dt><dd>选工作日较早或较晚的场次，热门房间人少很多。</dd>
+      <dt>去法</dt><dd>Planets：有乐町线丰洲站步行约 10 分钟（见 18 日图）。Borderless：日比谷线神谷町站，麻布台 Hills 内。</dd>
+      <dt>费用</dt><dd>Planets ¥3,800 起、无现场票；Borderless ¥3,400 起、动态价最高约 ¥5,800（都未订票，按官网为准）。</dd>
+      <dt>坑</dt><dd>Planets 要挽裤脚下水，穿方便卷起的裤子和好脱的鞋；馆内部分区域地面是镜面，穿裙子要注意。</dd></dl></div>
+
+    <div class="spot"><h4>六本木灯光</h4>
+      <img class="spotimg" src="assets/img-035.jpg" alt="六本木榉坂灯饰与东京塔" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>冬日灯饰大道 · 夜景地标。</strong>榉坂两排树挂满灯，坡道尽头正对东京塔，是东京冬天最有名的灯光构图。看点就是灯带收拢、塔居中的一幅，顺路还能上六本木 Hills 展望台。</dd>
+      <dt>站位/朝向</dt><dd>榉坂（Keyakizaka）站在坡道下段的人行道，朝坡上拍：灯带两侧收拢，尽头正对东京塔。</dd>
+      <dt>构图</dt><dd>灯树做两侧边框，东京塔落在画面正中——这是六本木冬天的标志构图。</dd>
+      <dt>最佳时间</dt><dd>亮灯后到 21:00 前，蓝调时刻灯和天色最配。</dd>
+      <dt>去法</dt><dd>大江户线/日比谷线六本木站，六本木 Hills 方向（见 18 日图）。</dd>
+      <dt>费用</dt><dd>免费（Hills 展望台另收费）。</dd>
+      <dt>坑</dt><dd>坡道是车行道，拍照只站人行道和斑马线端头；周末人多，工作日晚上去更稳。</dd></dl></div>
+
+    <div class="spot"><h4>东京塔环线（约1小时 · 不走回头路）</h4>
+      <img class="spotimg" src="assets/img-033.webp" alt="夜晚亮灯的东京塔" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>观光铁塔 · 老东京地标。</strong>橙红色的铁塔 1958 年建成，比晴空塔矮，但颜色和街景融合得更好看。绕塔一圈每个角度的前景都不同：草坪、街口、建筑框景和高层俯瞰，黄昏亮灯后是它最漂亮的时段。</dd>
+      <dt>路线/站位</dt><dd>按小红书实测环线走：<strong>赤羽桥站 E21 出口</strong>出站即拍塔身近景 → <strong>芝公园</strong>草坪拍塔 + 绿地全景 → <strong>「北海道 Wine」店门口跳拍点</strong>（人在画面下方跳起、塔在正后方）→ <strong>豆腐屋 UKAI 停车场出口</strong>（塔从建筑间正框而出，排队最长的一个点）→ <strong>Kaledo Tower 路口</strong>拍塔 + 街景 → <strong>Prince Park Tower 33 楼</strong>收尾俯瞰（这是观景机位，不是住宿安排）。</dd>
+      <dt>朝向/构图</dt><dd>全程塔都在同一侧，顺时针绕塔一周，每个点塔的比例和前景都不同：近景压迫感 → 公园全景 → 街景框景 → 高层俯瞰。</dd>
+      <dt>最佳时间</dt><dd>黄昏到蓝调时刻最好；穿<strong>红色</strong>衣服和橙红色的塔最配。豆腐屋 UKAI 那个点 <strong>08:30 前</strong>去排队最短——想拍清晨版就早去，想拍亮灯版就傍晚去，二选一。</dd>
+      <dt>去法</dt><dd>大江户线赤羽桥站 E21 出口开始，环线终点接回大门/赤羽桥一带回池袋（见 18 日图）。</dd>
+      <dt>费用</dt><dd>环线本身免费；上塔另算：主甲板 ¥1,500、顶层游览 ¥3,300（网上价，未订票，按官网为准）。</dd>
+      <dt>坑</dt><dd>UKAI 停车场出口是私人区域出入口，排队时别堵车道；跳拍点注意来车，只在人行道一侧跳。</dd></dl></div>
+
+    <div class="spot"><h4>东京都厅展望台（天气保底）</h4>
+      <img class="spotimg" src="assets/img-036.jpg" alt="东京都厅双塔大楼" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>政府大楼 · 免费展望台。</strong>新宿的双塔大楼（图），45 楼展望室免费开放，天气好时朝西能看到富士山，入夜是整片新宿灯海。它是雨天和大风天的保底展望台，不用预约、不用门票。</dd>
+      <dt>站位/朝向</dt><dd>新宿东京都厅第一本厅舍 45 楼展望室，站在朝东的玻璃面看市中心，天气好时朝西能看到富士山方向。</dd>
+      <dt>构图</dt><dd>高楼群 + 远山，夜里是整片灯海。</dd>
+      <dt>最佳时间</dt><dd>下雨/大风、上不了其他展望台的那天，或行程最后一晚补夜景。</dd>
+      <dt>去法</dt><dd>大江户线都厅前站直结，或新宿站步行约 10 分钟。</dd>
+      <dt>费用</dt><dd><strong>免费</strong>。</dd>
+      <dt>坑</dt><dd>南北两个展望室开放日不同，去之前查当天开哪个；安检要排队，预留 20 分钟。</dd></dl></div>
+  </section>
+
+  <section id="museums">
+    <h2><span class="no">美术馆</span>美术馆 · 按区域选（有空就近挑）</h2>
+    <p class="sub">这 9 个馆不排进正式日程，按区域分组放在这里：哪天走到附近、又有 1–2 小时空档，就按「离哪天最近」挑一个进去。每张卡写清地址/车站、从酒店和当天行程怎么过去、开放时间、门票、闭馆日和大概逛多久。teamLab（Planets / Borderless）已在 18 日行程里，这一章不重复列。价格和时间按各馆官网 2026年11月查到的信息，特展内容以去之前官网为准。</p>
+
+    <div class="warn">
+      <strong>先看闭馆日，这趟最容易踩空的是这两天：</strong>
+      <ul class="tight" style="margin-bottom:0">
+        <li><strong>12月14日（周一）：</strong>东京国立博物馆、国立西洋美术馆、根津美术馆、东京都写真美术馆、草间弥生美术馆<strong>全部闭馆</strong>。这天开的是森美术馆、国立新美术馆、21_21 Design Sight、冈本太郎纪念馆——正好 14 日排富士/市区购物，不冲突。</li>
+        <li><strong>12月15日（周二）：</strong>国立新美术馆、21_21 Design Sight、冈本太郎纪念馆闭馆，东京国立博物馆这天还<strong>全馆休馆一天</strong>（设施检查）。这天是迪士尼日，也不冲突。</li>
+        <li><strong>草间弥生美术馆只开周四–周日</strong>，且全预约、无现场票：这趟能去的只有 12日（六）、13日（日）、17日（四）、18日（五），12 月的票已经开售，要去现在就订。</li>
+      </ul>
+    </div>
+
+    <h3>六本木 · 离 12月18日最近（teamLab + 六本木灯光日）</h3>
+    <p class="sub" style="margin-bottom:4px">三个馆互相步行 5–10 分钟，都在 18 日晚上的活动范围里。18 日是周五，按关门时间排顺序别反：<strong>21_21（19:00 关）→ 国立新美术馆（周五到 20:00）→ 森美术馆（到 22:00）</strong>。从池袋酒店单独去一趟约 35 分钟：副都心线到东新宿换大江户线到六本木。</p>
+
+    <div class="spot"><h4>森美术馆 Mori Art Museum</h4>
+      <img class="spotimg" src="assets/img-057.jpg" alt="森美术馆展厅里的大型当代艺术作品" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>现代艺术 · 高空美术馆。</strong>在六本木新城森大厦 53 楼（52 楼是展望台 Tokyo City View），东京最有代表性的当代艺术馆之一：不设常设展、只办大型特展，没有展览时闭馆。这趟正赶上<strong>森万里子个展（2026年10月31日–2027年3月28日，会期中无休）</strong>。看点是尺度很大的当代装置，加上 53 楼的高空感；适合想看「正在发生的」艺术、而且晚上还有空的人——它开到 22:00，是全东京关门最晚的美术馆之一。</dd>
+      <dt>地址/车站</dt><dd>六本木 6-10-1，六本木新城森大厦 53F。日比谷线六本木站 1C 出口直结；大江户线六本木站 3 出口步行约 4 分钟。</dd>
+      <dt>怎么走</dt><dd>18 日当天就在六本木：榉坂看完灯，步行约 5 分钟到森大厦，夜里看完展再回酒店正好。从池袋酒店单独去约 35 分钟（见本组开头）。</dd>
+      <dt>开放时间</dt><dd>10:00–22:00（最后入馆 21:30）；<strong>周二只到 17:00</strong>。</dd>
+      <dt>门票</dt><dd>按展览定价，本期成人网上平日 ¥2,600 / 周末 ¥2,800，现场各贵 ¥200，建议网上买。和 52 楼展望台的套票在 <strong>12月18日–1月3日期间不能用</strong>，18 日去就单买美术馆票。</dd>
+      <dt>闭馆日</dt><dd>展期内无休；展览空档期闭馆。</dd>
+      <dt>逛多久</dt><dd>约 1.5–2 小时。</dd></dl></div>
+
+    <div class="spot"><h4>国立新美术馆 The National Art Center, Tokyo</h4>
+      <img class="spotimg" src="assets/img-058.jpg" alt="国立新美术馆波浪玻璃幕墙中庭" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>建筑本身就是展品 · 无常设收藏的国立馆。</strong>黑川纪章设计的波浪形玻璃幕墙和中庭里的倒锥形咖啡座，光是走进去看建筑就值。它没有常设收藏，所以准确说法是：<strong>进馆免费</strong>（大厅、艺术图书馆、咖啡、商店和部分公募展免费），特展逐个收费。这趟的重点特展是<strong>卢浮宫文艺复兴名作展，只到 12月13日（日）结束</strong>——18 日去已经看不到了，想看只能赶在 13 日之前。</dd>
+      <dt>地址/车站</dt><dd>六本木 7-22-2。千代田线乃木坂站 6 出口直结；大江户线/日比谷线六本木站步行约 4 分钟。</dd>
+      <dt>怎么走</dt><dd>六本木三馆步行圈内，离森美术馆步行约 8 分钟。看建筑+喝咖啡可以挂在 18 日；看卢浮宫展要提前：12 日（六）浅草日晚上或 13 日（日）抽空过来，且 <strong>12月7–13日实行指定日期时间票，先在官网买好</strong>，那几天还延长开到 20:00。</dd>
+      <dt>开放时间</dt><dd>10:00–18:00，周五、周六到 20:00（最后入馆提前 30 分钟）。</dd>
+      <dt>门票</dt><dd>入馆免费；特展按展定价，卢浮宫展成人预售 ¥2,200 / 当日 ¥2,400（12月7–13日为指定时段票 ¥2,400）。</dd>
+      <dt>闭馆日</dt><dd><strong>周二</strong>（15 日周二去不了；周一正常开，14 日可以去）。</dd>
+      <dt>逛多久</dt><dd>只看建筑+咖啡约 45 分钟；加一个特展约 1.5–2 小时。</dd></dl></div>
+
+    <div class="spot"><h4>21_21 Design Sight</h4>
+      <img class="spotimg" src="assets/img-059.jpg" alt="21_21 Design Sight安藤忠雄设计的低矮建筑" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>设计类 · 安藤忠雄的折纸屋顶。</strong>藏在东京中城花园绿地里，一半埋在地下，屋顶像一片折起来的钢板。由三宅一生发起，专门做「把日常东西重新看一遍」的设计展。这趟的展是<strong>《方丈记》小型建筑展（2026年8月28日–2027年1月11日）</strong>：一群建筑师做的小屋子，讲怎么住得更小。适合对设计、建筑、产品感兴趣的人；馆小，看展节奏快。</dd>
+      <dt>地址/车站</dt><dd>赤坂 9-7-6，东京中城花园内。六本木站、乃木坂站步行约 5 分钟。<strong>入口在花园里，不在商场里面</strong>，别进 Midtown 楼里找。</dd>
+      <dt>怎么走</dt><dd>从国立新美术馆步行约 5 分钟即到，六本木三馆里它关门最早，18 日先看它。</dd>
+      <dt>开放时间</dt><dd>10:00–19:00（最后入馆 18:30）。</dd>
+      <dt>门票</dt><dd>按展定价，本期成人 ¥1,700。</dd>
+      <dt>闭馆日</dt><dd><strong>周二</strong>、换展期、年末年始（12月27日–1月3日）。</dd>
+      <dt>逛多久</dt><dd>约 45 分钟–1 小时。</dd></dl></div>
+
+    <h3>上野 · 离 12月12日（浅草日）和 12月16日（秋叶原日）最近</h3>
+    <p class="sub" style="margin-bottom:4px">两个馆都在上野公园里，彼此步行约 5 分钟，可以连看。12 日去程本来就在上野换乘去浅草，16 日秋叶原和上野只隔一站。注意两馆都<strong>周一闭馆</strong>，12 日（六）两馆都开到 20:00，是这趟最宽松的上野窗口。</p>
+
+    <div class="spot"><h4>东京国立博物馆 Tokyo National Museum</h4>
+      <img class="spotimg" src="assets/img-060.jpg" alt="东京国立博物馆本馆与前方水池" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>日本美术/考古 · 日本规模最大的博物馆。</strong>上野公园深处一整片馆群（本馆、东洋馆、平成馆、法隆寺宝物馆），收藏日本和东亚的国宝级原件：佛像、武士刀、浮世绘、茶器、埴轮。适合想认真看日本文化原件的人；馆太大，第一次去<strong>只攻本馆就够</strong>，别贪全。</dd>
+      <dt>地址/车站</dt><dd>上野公园 13-9。JR 上野站公园口步行约 10 分钟。</dd>
+      <dt>怎么走</dt><dd>12 日：去浅草在上野换银座线时提前下车，先逛馆再去浅草；16 日：秋叶原坐山手线 1 站到上野。从池袋酒店山手线直达约 18 分钟。</dd>
+      <dt>开放时间</dt><dd>9:30–17:00，周五、周六到 20:00（最后入馆提前 30 分钟）。</dd>
+      <dt>门票</dt><dd>常设展成人 ¥1,000，特展另收费。这趟注意：<strong>东洋馆 11月30日–12月31日关闭</strong>，本馆个别展室同期调整，只看本馆主线不受影响。</dd>
+      <dt>闭馆日</dt><dd><strong>周一</strong>；另外 <strong>12月15日（周二）全馆休馆一天</strong>（设施检查）。这趟能去的是 12、13、16、17、18 日。</dd>
+      <dt>逛多久</dt><dd>本馆精看约 2 小时；全馆 3 小时以上，别排在赶行程的日子。</dd></dl></div>
+
+    <div class="spot"><h4>国立西洋美术馆 National Museum of Western Art</h4>
+      <img class="spotimg" src="assets/img-061.jpg" alt="国立西洋美术馆柯布西耶设计的本馆" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>西方艺术 · 建筑是世界遗产。</strong>本馆由柯布西耶设计，2016 年作为「柯布西耶建筑作品」列入世界遗产——看展顺便看建筑。以松方收藏为核心：莫奈、雷诺阿、梵高、毕加索，馆前广场还有罗丹的《思想者》和《地狱之门》。这趟的特展是<strong>泰特美术馆透纳展（2026年10月24日–2027年2月21日）</strong>。适合喜欢印象派和现代建筑的人，常设展小而精，不累。</dd>
+      <dt>地址/车站</dt><dd>上野公园 7-7。JR 上野站公园口步行约 1 分钟，出站就是。</dd>
+      <dt>怎么走</dt><dd>和东京国立博物馆步行约 5 分钟互达，两馆连看；12 日、16 日顺路同上。</dd>
+      <dt>开放时间</dt><dd>9:30–17:30，周五、周六到 20:00（最后入馆提前 30 分钟）。</dd>
+      <dt>门票</dt><dd>常设展成人 ¥500；透纳特展成人 ¥2,400（含常设展）。每月第二个周日常设展免费，这趟 12月13日正好是——但 13 日人在原宿一带，专程跑一趟只为省 ¥500 不值，知道有这回事即可。</dd>
+      <dt>闭馆日</dt><dd><strong>周一</strong>。</dd>
+      <dt>逛多久</dt><dd>常设约 1–1.5 小时，加特展约 2 小时。</dd></dl></div>
+
+    <h3>表参道 / 青山 · 离 12月13日最近（明治神宫 / 原宿日）</h3>
+    <p class="sub" style="margin-bottom:4px">两个馆都在表参道站步行约 8 分钟的南青山住宅区里，彼此步行约 5 分钟，13 日可以连看。注意两馆闭馆日正好错开：根津休周一、冈本太郎休周二——13 日周日两馆都开，是唯一能连看的日子。</p>
+
+    <div class="spot"><h4>根津美术馆 Nezu Museum</h4>
+      <img class="spotimg" src="assets/img-062.jpg" alt="根津美术馆日式庭园池塘与石灯笼" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>日本/东亚古美术 + 日式庭园。</strong>隈研吾设计的馆舍藏在南青山，收藏以茶道具、佛像、屏风、漆器为主，镇馆的燕子花屏风只在春季特展展出。这家真正的王牌是约 17,000㎡ 的庭园：池塘、溪流、四座茶室和石灯笼，12 月还能赶上红叶的尾巴。适合想在市中心慢下来、看完展坐着喝杯茶的人。</dd>
+      <dt>地址/车站</dt><dd>南青山 6-5-1。表参道站 A5 出口步行约 8 分钟。</dd>
+      <dt>怎么走</dt><dd>13 日从明治神宫/原宿过来：千代田线明治神宫前 → 表参道 1 站，或沿表参道大道步行约 15 分钟南下。庭园和馆内咖啡都要凭馆票进入。</dd>
+      <dt>开放时间</dt><dd>10:00–17:00（最后入馆 16:30）。</dd>
+      <dt>门票</dt><dd>实行<strong>网上指定时段票</strong>：特展成人 ¥1,600 起 / 馆藏展 ¥1,400，现场票各贵 ¥200；最晚提前到前一天订，想去先把时段订了再安排当天动线。</dd>
+      <dt>闭馆日</dt><dd><strong>周一</strong>、换展期、年末年始——14 日去不了，排 13 日正好。</dd>
+      <dt>逛多久</dt><dd>展厅 + 庭园约 1.5 小时。</dd></dl></div>
+
+    <div class="spot"><h4>冈本太郎纪念馆 Taro Okamoto Memorial Museum</h4>
+      <img class="spotimg" src="assets/img-063.jpg" alt="冈本太郎纪念馆庭院里的雕塑" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>艺术家故居 · 原汁原味的工作室。</strong>冈本太郎在青山住了 40 多年的家和工作室原样开放：画室保持他去世时的样子，颜料和画布都在；庭院里挤满怪诞的雕塑，大阪世博的太阳之塔就是在这里构思的。馆很小但冲击力强，适合顺路打卡，不用专程。</dd>
+      <dt>地址/车站</dt><dd>南青山 6-1-19。表参道站步行约 8 分钟；离根津美术馆步行约 5 分钟。</dd>
+      <dt>怎么走</dt><dd>13 日和根津连看：先根津（按预约时段），出来步行 5 分钟到这里。入馆要脱鞋，馆内没有存包柜，轻装去。</dd>
+      <dt>开放时间</dt><dd>10:00–18:00（最后入馆 17:30）。</dd>
+      <dt>门票</dt><dd>成人 ¥900。</dd>
+      <dt>闭馆日</dt><dd><strong>周二</strong>（和根津的周一正好错开，见本组开头）。</dd>
+      <dt>逛多久</dt><dd>约 30–45 分钟。</dd></dl></div>
+
+    <h3>惠比寿 · 离 12月13日最近（涩谷日隔壁一站）</h3>
+    <p class="sub" style="margin-bottom:4px">惠比寿和涩谷只隔一站山手线（约 2 分钟），13 日涩谷 Sky 前后顺路就能塞进去；从池袋酒店单独去也是山手线直达约 19 分钟。另外它周四、周五开到 20:00，17 日（四）、18 日（五）晚上也是备选窗口。</p>
+
+    <div class="spot"><h4>东京都写真美术馆 Tokyo Photographic Art Museum（TOP Museum）</h4>
+      <img class="spotimg" src="assets/img-064.jpg" alt="惠比寿花园广场里的东京都写真美术馆" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>摄影专门馆。</strong>日本少有的公立摄影美术馆，在惠比寿花园广场里，三层展厅同时跑几个摄影和影像展：大师回顾、新人奖、馆藏精选都有。适合爱摄影的人——这趟全程都在到处拍照，来这里正好对口。</dd>
+      <dt>地址/车站</dt><dd>目黑区三田 1-13-3，惠比寿花园广场内。JR 惠比寿站东口步行约 7 分钟，走站内 Sky Walk 动线基本不淋雨。</dd>
+      <dt>怎么走</dt><dd>13 日：山手线涩谷 → 惠比寿 1 站约 2 分钟，下车步行即到；从池袋酒店山手线直达约 19 分钟。</dd>
+      <dt>开放时间</dt><dd>10:00–18:00，<strong>周四、周五到 20:00</strong>（最后入馆提前 30 分钟）。</dd>
+      <dt>门票</dt><dd>按展收费、逐展买票，一般成人一档 ¥700–900；同日看多个展有套票（各展 9 折）。</dd>
+      <dt>闭馆日</dt><dd><strong>周一</strong>。</dd>
+      <dt>逛多久</dt><dd>看 2 个展约 1–1.5 小时。</dd></dl></div>
+
+    <h3>新宿 / 早稻田 · 离池袋酒店最近，但开馆日最少</h3>
+    <p class="sub" style="margin-bottom:4px">从池袋过去只要约 25 分钟，是离酒店最近的一馆；但它一周只开四天，又必须提前抢时段票，想去要先订票再谈顺路。</p>
+
+    <div class="spot"><h4>草间弥生美术馆 Yayoi Kusama Museum</h4>
+      <img class="spotimg" src="assets/img-065.jpg" alt="草间弥生美术馆波点南瓜装置" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>波点/南瓜专门馆。</strong>草间弥生本人财团办的美术馆，白色五层小楼藏在早稻田住宅区里，展她的绘画、南瓜雕塑和镜屋类装置，顶楼还有户外作品。这趟的展期是 <strong>2026年10月8日–2027年1月31日</strong>。适合草间粉丝和爱拍照的人；但它是这 9 个馆里规则最严的一个。</dd>
+      <dt>地址/车站</dt><dd>新宿区弁天町 107。大江户线牛込柳町站步行约 6 分钟；东西线早稻田站步行约 7 分钟。</dd>
+      <dt>怎么走</dt><dd>从池袋酒店：山手线到高田马场换东西线到早稻田，约 25 分钟。这趟能赶的开馆日只有 <strong>12日（六）、13日（日）、17日（四）、18日（五）</strong>四天。</dd>
+      <dt>开放时间</dt><dd>11:00–17:30，每天 6 场、<strong>每场 90 分钟</strong>，必须在场次开始 30 分钟内入场；馆里没有等候区，别提前到。</dd>
+      <dt>门票</dt><dd>成人 ¥1,100，<strong>只在官网提前网上买、无现场票</strong>。12 月的票 10月1日已经开售——要去现在就订，热门场次会卖完，订好时段再排那天行程。</dd>
+      <dt>闭馆日</dt><dd><strong>周一至周三</strong>、换展期、年末年始。</dd>
+      <dt>逛多久</dt><dd>固定 90 分钟一场，看完即走。</dd></dl></div>
+  </section>
+
+  <section id="shopping">
+    <h2><span class="no">购物</span>购物推荐 · 给大莉（按区域选 · 有空就近逛）</h2>
+    <p class="sub">这一章是给大莉的购物清单，不排进正式日程：按区域分六组，哪天走到附近、有 1–2 小时空档，就挑最近的一组逛。每组写清去哪家店、推荐买什么、大概价位和适合她的点。先看下面的免税和支付，六组通用。</p>
+
+    <div class="card">
+      <h3 style="margin-top:0">先说清：免税 · 支付 · 行李</h3>
+      <ul class="tight">
+        <li><strong>免税条件：</strong>同一家店、同一天买满 <strong>¥5,000（未税）</strong>就可以办免税，结账或到免税柜台出示<strong>大莉本人的护照原件</strong>（照片和复印件不行，出门逛街那天护照要随身带）。百货公司一般在免税柜台统一办，部分商场会收约 1.55% 的手续费，以店内为准。</li>
+        <li><strong>消耗品要封袋：</strong>化妆品、护肤品、零食这类「消耗品」免税后会封进专用袋，在日本境内不要拆开用；衣服、包包、饰品这类「一般物品」没有这个限制。两类凑单规则不同，结账前先问店员怎么分单最划算。</li>
+        <li><strong>支付只用 Revolut：</strong>这一章所有店都刷 <strong>Revolut</strong>，不用写别的支付方式；大店和药妆店都收卡，小店买小东西前先看一眼收银台的刷卡标识。</li>
+        <li><strong>给行李留余量：</strong>12月19日回程那段每人托运限 20kg（见 19 日行程），买之前先想箱子还剩多少重量——护肤品和零食最压秤，大件和重货尽量放前几天买、分散装箱，最后一天只补轻的小东西。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">速选表：按「离哪天最近」挑</h3>
+      <table>
+        <tr><th>区域</th><th>最适合买</th><th>离哪天最近</th><th>大概逛多久</th></tr>
+        <tr><td><strong>银座</strong></td><td>高端美妆护肤、正式伴手礼、包包</td><td>12月16日下午（银座段）</td><td>1.5–2.5 小时</td></tr>
+        <tr><td><strong>原宿 / 表参道</strong></td><td>日系小众品牌、潮牌、饰品</td><td>12月13日（明治神宫 / 原宿日）</td><td>1–2 小时</td></tr>
+        <tr><td><strong>涩谷</strong></td><td>平价彩妆药妆、年轻女装、角色周边</td><td>12月13日傍晚（涩谷 Sky 前后）</td><td>1–1.5 小时</td></tr>
+        <tr><td><strong>新宿</strong></td><td>百货美妆（最全）、零食、电器美容器</td><td>富士日回程经新宿，或从池袋坐山手线约 6 分钟专程去</td><td>1.5–2 小时</td></tr>
+        <tr><td><strong>池袋</strong></td><td>日常补货、零食伴手礼、角色周边</td><td>11–17日每天回酒店都顺路，离酒店最近</td><td>30 分钟–1 小时，碎片时间就能逛</td></tr>
+        <tr><td><strong>秋叶原</strong></td><td>动漫周边、扭蛋手办、电器</td><td>12月16日上午（秋叶原段）</td><td>1–1.5 小时</td></tr>
+      </table>
+    </div>
+
+    <h3>银座 · 美妆护肤和高端百货（正式采购放这里）</h3>
+    <div class="spot"><h4>银座三越 / 松屋银座 / 资生堂 · SK-II 专柜</h4>
+      <img class="spotimg" src="assets/img-066.jpg" alt="银座三越百货外观" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>高端百货街区 · 一次买齐正式清单的地方。</strong>图里就是银座三越，整栋楼的化妆品层和食品层都值得逛；对面一带还有松屋银座、Ginza Six 和资生堂的旗舰店面，几家之间步行几分钟。这一区适合把「要认真买」的东西集中解决：成套护肤、送人的伴手礼和一只好包。</dd>
+      <dt>去哪家店</dt><dd><strong>银座三越</strong>（美妆在 1 楼/B1，SK-II、肌肤之钥、POLA、奥尔滨、SUQQU 等专柜集中，免税柜台在店内统一办）；<strong>松屋银座</strong>（美妆和包包楼层人相对少，逛起来舒服）；<strong>资生堂</strong>银座旗舰店面和 Shiseido Parlour（护肤彩妆看旗舰店， Parlour 的点心适合当伴手礼）；SK-II 不用找独立店，三越和松屋的专柜就有，买之前先比两家的套装和赠品。</dd>
+      <dt>推荐买什么</dt><dd><strong>美妆护肤品：</strong>SK-II 神仙水套装、资生堂和肌肤之钥的日系高端线——在日本买专柜套装和限定组合最划算，先列好清单再进店，避免被套装带着多买。<strong>包包：</strong>两家百货的包包楼层看大牌和日系轻奢，免税后价差明显，买之前确认好款式再下手。<strong>零食伴手礼：</strong>三越和松屋的地下食品层（Depachika）买礼盒装点心，包装正式，适合带回去送人。</dd>
+      <dt>价位参考</dt><dd>护肤单品约 ¥5,000–30,000+，彩妆约 ¥3,000–8,000，礼盒零食约 ¥1,000–3,000/盒，包包按品牌浮动大。</dd>
+      <dt>怎么去</dt><dd>16 日下午本来就排了银座段（见 16 日出行图），逛完步行去东京站吃晚饭正好顺路；单独去从池袋坐有乐町线到有乐町/银座一丁目，或山手线到有乐町步行。</dd>
+      <dt>适合大莉的点</dt><dd>专柜服务细、有中文导购的概率高，试色试用不用赶；要买给自己用的成套护肤和送人的正式礼盒，这一区一趟就能买完，不用全城比价。</dd></dl></div>
+
+    <h3>原宿 / 表参道 · 潮牌、设计师品牌和饰品（挑有自己风格的东西）</h3>
+    <div class="spot"><h4>表参道大道 / Laforet 原宿 / 猫街 / @cosme TOKYO</h4>
+      <img class="spotimg" src="assets/img-067.jpg" alt="表参道林荫大道与大牌旗舰店" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>设计师品牌大道 + 年轻潮流街。</strong>图里是表参道：林荫大道两边是大牌和设计师品牌的建筑旗舰店，逛街本身就像看建筑展；转进猫街（Cat Street）和竹下通方向，画风立刻变成小众买手店、古着和饰品小店。这一区适合慢慢挑「不容易撞款」的东西。</dd>
+      <dt>去哪家店</dt><dd><strong>表参道 Hills 和大道两边的旗舰店</strong>看设计师品牌和包包；<strong>Laforet 原宿</strong>整栋是年轻日系女装和小众品牌；<strong>猫街</strong>沿路的买手店和饰品店挑耳饰、发饰、围巾这类小件；<strong>@cosme TOKYO</strong>（原宿站前）是大型美妆集合店，日系开架和专柜彩妆按口碑榜陈列，想试平价彩妆先来这里摸一遍。</dd>
+      <dt>推荐买什么</dt><dd><strong>日系小众品牌</strong>的衣服和包包（设计感强、国内少见）；<strong>饰品</strong>：耳环、项链、发夹这类轻便好带、单价不高，最适合当旅行纪念；美妆在 @cosme 补开架彩妆和限定色号。</dd>
+      <dt>价位参考</dt><dd>饰品约 ¥1,500–6,000，小众品牌衣服约 ¥8,000–30,000，包包约 ¥10,000–40,000，开架彩妆约 ¥600–2,500。</dd>
+      <dt>怎么去</dt><dd>13 日明治神宫出来就是原宿，沿表参道往涩谷方向边走边逛（见 13 日出行图），不用专程安排。</dd>
+      <dt>适合大莉的点</dt><dd>这一区的乐趣在「挑」不在「扫货」：小店多、款式杂，适合给自己选一两件有记忆点的饰品或小众单品；小店不一定能免税，单笔不满 ¥5,000 就直接刷 Revolut 结账，别为凑免税多买。</dd></dl></div>
+
+    <h3>涩谷 · 109、Parco 和药妆（年轻、平价、一站补齐）</h3>
+    <div class="spot"><h4>SHIBUYA109 / 涩谷 Parco / 松本清药妆</h4>
+      <img class="spotimg" src="assets/img-068.jpg" alt="涩谷109大楼与旁边的松本清药妆招牌" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>年轻女装地标 + 新派商场 + 药妆，全在一个路口。</strong>图左边圆柱楼就是 SHIBUYA109，右边黄招牌是松本清药妆——两个点出站步行几分钟内全到。涩谷 Parco 稍远几分钟，里面是任天堂、宝可梦等角色店加设计师楼层，和 109 是两种逛法。</dd>
+      <dt>去哪家店</dt><dd><strong>SHIBUYA109</strong>看当季年轻女装和饰品；<strong>涩谷 Parco</strong>看角色周边和日系小众品牌楼层；<strong>药妆去松本清</strong>（涩谷一带有多家，认黄蓝招牌），或唐吉诃德涩谷店补零食和杂货。</dd>
+      <dt>推荐买什么</dt><dd><strong>药妆美妆：</strong>Canmake、Cezanne、KATE 的开架彩妆，Anessa 防晒，LuLuLun 面膜，资生堂开架线——单价低、适合一次补齐日常用的。<strong>零食伴手礼：</strong>药妆店和唐吉诃德的限定口味零食、巧克力，轻便不压秤。</dd>
+      <dt>价位参考</dt><dd>开架彩妆约 ¥600–2,000，面膜约 ¥800–2,500，109 的衣服约 ¥4,000–12,000，零食约 ¥300–1,500。</dd>
+      <dt>怎么去</dt><dd>13 日涩谷 Sky 前后就在这一带（见 13 日出行图）：先逛店、再上 Sky 看日落，或看完夜景下来补药妆，很多药妆店开到很晚。</dd>
+      <dt>适合大莉的点</dt><dd>价格友好、试错成本低：开架彩妆可以多试几个色号，药妆免税凑满 ¥5,000 很容易；注意药妆免税封袋后在日本不能拆，要用的防晒和面膜单独买一小份不免税的。</dd></dl></div>
+
+    <h3>新宿 · 伊势丹、高岛屋、药妆和电器（百货美妆最全的一站）</h3>
+    <div class="spot"><h4>伊势丹新宿店 / 新宿高岛屋 / 药妆 · 电器量贩</h4>
+      <img class="spotimg" src="assets/img-069.jpg" alt="新宿伊势丹百货外观" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>东京百货的门面担当。</strong>图里是伊势丹新宿店，它的化妆品楼层被公认是东京百货里最全最好逛的一层，地下食品层也是伴手礼的富矿。新宿高岛屋在车站南口的 Times Square 里，和伊势丹一南一北，按当天动线选一家即可，不用两家都跑。</dd>
+      <dt>去哪家店</dt><dd><strong>伊势丹新宿店</strong>（美妆主攻：SUQQU、THREE、ADDICTION 等日系专柜彩妆，护肤看资生堂和肌肤之钥专柜；地下食品层买点心礼盒）；<strong>新宿高岛屋</strong>（品牌全、动线宽，适合看包包和服饰）；<strong>药妆</strong>在新宿三丁目和车站周边随处可见，补货不用挑店；<strong>电器去 Bic Camera / Yodobashi</strong>看美容电器和小家电。</dd>
+      <dt>推荐买什么</dt><dd><strong>美妆护肤品</strong>以专柜彩妆为主攻，和银座二选一即可，别两边重复买；<strong>零食伴手礼</strong>在伊势丹地下层挑礼盒；<strong>电器</strong>看吹风机、美容仪这类小件——先确认是不是 100–240V 全球电压款，不是的话回国用不了，别只看价格下单。</dd>
+      <dt>价位参考</dt><dd>专柜彩妆约 ¥3,000–8,000，护肤约 ¥5,000–15,000，食品礼盒约 ¥1,000–3,000，美容电器约 ¥8,000–35,000。</dd>
+      <dt>怎么去</dt><dd>从池袋坐山手线约 6 分钟到新宿，是离酒店第二近的大商圈；富士日回程如果坐到新宿吃晚饭（见 14 日行程的回程选项），饭前饭后顺手就能逛伊势丹。</dd>
+      <dt>适合大莉的点</dt><dd>如果这趟只认真逛一家百货美妆，选伊势丹：品牌密度最高、试色环境好；它和银座三越是同类定位，清单二选一，别两家都排满。</dd></dl></div>
+
+    <h3>池袋 · 西武、东武、Sunshine City（离酒店最近，随时能逛）</h3>
+    <div class="spot"><h4>西武池袋 / 东武池袋 / Sunshine City</h4>
+      <img class="spotimg" src="assets/img-070.jpg" alt="池袋Sunshine City入口与高层大楼" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>住处门口的补给区。</strong>图里是池袋东口的 Sunshine City，11–17 日住 Tora 期间，这里就是「回酒店路上顺手逛」的范围：车站两侧是西武和东武两家大百货，阳光城里是角色周边和杂货，阳光 60 通一带全是药妆和连锁店。</dd>
+      <dt>去哪家店</dt><dd><strong>西武池袋本店</strong>（车站东口，美妆和地下食品层补伴手礼）；<strong>东武百货池袋店</strong>（车站西口，食品层大，买点心和熟食方便）；<strong>Sunshine City</strong>（宝可梦中心 Mega Tokyo 等角色店和扭蛋区，营业情况以当天为准，进城前先确认）；药妆在阳光 60 通和车站周边挑最近的一家。</dd>
+      <dt>推荐买什么</dt><dd><strong>零食伴手礼</strong>的最后补货（两家百货地下层）；<strong>日常小物和药妆补货</strong>（面膜、防晒、护手霜这类用完就买的）；角色周边小件，轻便不占行李。</dd>
+      <dt>价位参考</dt><dd>以小件为主：单品多在 ¥500–5,000，食品礼盒约 ¥1,000–3,000。</dd>
+      <dt>怎么去</dt><dd>池袋站步行回酒店约 13–15 分钟（见图二），东口出站就是阳光城方向；17 日换酒店之后就不顺路了，要买的尽量在 11–17 日这段买完。</dd>
+      <dt>适合大莉的点</dt><dd>不用专程、不用赶：每天玩完回来花半小时慢慢挑，重的东西买完直接放回酒店，不用拎着逛一整天——这是六个区里对体力最友好的一个。</dd></dl></div>
+
+    <h3>秋叶原 · 动漫周边和电器（16 日上午顺路）</h3>
+    <div class="spot"><h4>友都八喜秋叶原 / Animate / 扭蛋手办店</h4>
+      <img class="spotimg" src="assets/img-028.jpg" alt="秋叶原电器街霓虹招牌" loading="lazy" />
+      <dl class="kv"><dt>介绍</dt><dd><strong>电器街兼动漫圣地。</strong>中央通两边是电器量贩和一层层的手办、扭蛋、角色周边店（景点介绍见机位卡的秋叶原）。购物上它分两半：一半是电器和数码小物，一半是动漫周边，按兴趣挑一半逛就够。</dd>
+      <dt>去哪家店</dt><dd><strong>友都八喜 Yodobashi Akiba</strong>（车站旁整栋，电器、玩具、美妆杂货都有，免税柜台集中）；<strong>Animate 秋叶原店</strong>和 <strong>Mandarake</strong>看手办和角色周边；扭蛋专门店在中央通沿路，认机器墙进店即可。</dd>
+      <dt>推荐买什么</dt><dd><strong>动漫周边</strong>：手办、挂件、扭蛋（单颗小、适合当小礼物分给朋友）；<strong>电器小物</strong>：耳机、充电配件这类，回国电压没问题的优先；美妆只在这里补漏，不作主攻。</dd>
+      <dt>价位参考</dt><dd>扭蛋约 ¥300–500/颗，周边小物约 ¥500–3,000，手办约 ¥2,000–15,000，电器按品类浮动。</dd>
+      <dt>怎么去</dt><dd>16 日上午本来就排了秋叶原段（见 16 日出行图），逛完坐日比谷线去银座，两段购物正好一动一静接上。</dd>
+      <dt>适合大莉的点</dt><dd>如果她喜欢动漫和角色周边，这里是全程密度最高的一站，小件多、单价低，买一堆也不压行李；不感兴趣就只逛友都八喜一栋，把时间留给下午的银座。</dd></dl></div>
+
+    <p class="small">小结：认真买护肤和包包去银座或新宿伊势丹（二选一），挑小众和饰品去原宿/表参道，平价彩妆药妆去涩谷，周边去秋叶原，零碎补货和伴手礼收尾交给池袋。所有价位是购物参考、不是已订项目的价格；支付统一刷 Revolut，免税记得带大莉的护照原件。</p>
+  </section>
+
+  <section id="practical">
+    <h2><span class="no">实用</span>交通 · 支付 · 门票 · 出发前清单</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3 style="margin-top:0">坐车：手机 Suica 就够了</h3>
+        <ul class="tight">
+          <li>用<strong>绿色普通 Suica</strong>，在 iPhone 的 Apple Wallet 里直接添加，进站刷一下、出站刷一下，全东京的 JR、地铁、巴士和江之电都通用。</li>
+          <li>先充 <strong>¥2,000–3,000</strong>，不够随时在 Wallet 里续充。</li>
+          <li>常用票价：池袋→新宿 山手线 ¥170；池袋→涩谷 ¥200 左右；市内一段一般 ¥170–¥260。</li>
+          <li>长距离（镰仓 ¥1,040、机场 Skyliner）也刷 Suica/买票即可，不用另买通票——这趟的行程密度算下来通票不划算。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">支付</h3>
+        <ul class="tight">
+          <li>主力：<strong>Revolut</strong>，工作日换汇额度内免手续费，日元消费直接刷。</li>
+          <li>备用：<strong>澳洲 Visa 借记卡</strong>一张，放在 Revolut 刷不过时用（注意约 3% 境外交易费，只做备用）。</li>
+          <li>现金：备少量日元现金，给神社香油钱、小店和交通卡以外的零星支出用。</li>
+          <li>PayPay 需要日本手机号，用不了；日本大部分 PayPay 商户可刷支付宝/微信支付。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">门票总表（全部未订票 · 价格按官网为准）</h3>
+      <table>
+        <tr><th>项目</th><th>价格</th><th>抢票/订票要点</th></tr>
+        <tr><td>涩谷 Sky</td><td>¥2,700（10:00–14:59）/ ¥3,400（15:00 后）</td><td>提前 14 天 00:00 JST 开售（墨尔本时间约 02:00），日落场最先卖完；进场带护照原件。目标是 13 日 15:00 场。</td></tr>
+        <tr><td>晴空塔</td><td>天望甲板 ¥1,800 起 / 套票 ¥3,000 起</td><td>网上订比现场便宜约 ¥500。</td></tr>
+        <tr><td>teamLab Planets</td><td>¥3,800 起</td><td>无现场票，必须网上订。</td></tr>
+        <tr><td>teamLab Borderless</td><td>¥3,400 起（动态价最高约 ¥5,800）</td><td>与 Planets 二选一，未定。</td></tr>
+        <tr><td>东京塔</td><td>主甲板 ¥1,500 / 顶层 ¥3,300</td><td>网上价；环线机位本身免费。</td></tr>
+        <tr><td>迪士尼海洋一日票</td><td>平日 ¥10,900 / 周日 ¥11,900 / 周六 ¥12,400</td><td>09:00–21:00，圣诞季到 12月25日；15 日周二是平日价。</td></tr>
+        <tr><td>吉卜力美术馆</td><td>¥1,000 + 手续费 ¥110 = ¥1,110/成人</td><td>12 月票 11月10日已开售，很可能已卖完；每周二闭馆（15 日去不了）。想去先查余票，别排进正式日程。</td></tr>
+        <tr><td>江之电一日券</td><td>¥800</td><td>镰仓当天在镰仓站买，当日无限坐。</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">出发前清单（东京段）</h3>
+      <ul class="tight">
+        <li>☐ 大莉 的<strong>日本签证</strong>：经指定旅行社送签，约 5 个工作日、约 715 元——这一周内办掉。</li>
+        <li>☐ 大莉 的<strong>香港签注</strong>：单次 15 元，自助机即时办，回程经香港要用。</li>
+        <li>☐ 富士天气追踪：12月4日、6日先看两眼，11–12 日最终定 14 日还是 16 日去富士。</li>
+        <li>☐ 涩谷 Sky 抢票：目标场次提前 14 天 00:00 JST 开售，定好闹钟（墨尔本约 02:00）。</li>
+        <li>☐ 池袋直达巴士（富士日）和 Skyliner 的票：日期定了就订，尤其是富士回游 16 日的少量余位。</li>
+        <li>☐ 12月19日行李：两个箱子在酒店先称重，GK027 每人限 20kg，超重提前网上加购（机场 ¥2,000/kg）。</li>
+        <li>☑ <strong>香港木的地已订：</strong>19–20日 1 晚豪华特大床房（1 张特大双人床，36㎡，城景，17–22 楼），原价 AUD 530；到店押金 HK$500。</li>
+        <li>☐ <strong>20日西九龙 → 福田高铁票：</strong>提前在 12306 / 携程买 21 点左右的班次（HK$75），证件与买票一致；最晚 22:00 到站，末班 23:00。</li>
+        <li>☐ Suica 出发前在 Apple Wallet 加好并充 ¥2,000–3,000，落地成田就能刷。</li>
+      </ul>
+      <p class="small">本页为重建版（2026年11月20日，11月22日加入香港段）：行程除已订航班、澳门 YOHO酒店（12月9–11日 2 晚）、Tora Hotel（11–17日 6 晚）和香港木的地酒店（12月19–20日 1 晚，豪华特大床房，原价 AUD 530，已订）外均为暂定，17–19日酒店未定，门票价格以各官网当日为准；标注「未核实」的两项（青之洞窟 2026 日期、宝可梦中心 Mega Tokyo 营业状态）和镰仓替代机位的管制情况，出发前再确认。</p>
+    </div>
+  </section>
+
+  <section id="hongkong">
+    <h2><span class="no">香港 · 最后一站</span>住木的地（佐敦）：19日晚到 · 20日拍照 · 晚上高铁回深圳</h2>
+    <p class="sub">全程最后一站，这一章按时间顺序排：<strong>12月19日深夜抵港入住木的地酒店 → 12月20日白天退房寄行李、庙街、尖沙咀海滨、星光大道、西九文化区、日落 → 12月20日晚上取行李、打车去西九龙站、高铁回深圳福田</strong>。打卡地图（放大版）和交通总表放在本章最后，行程看完再查图。</p>
+
+    <div class="dayhead"><span class="d">12月19日 · 周六深夜</span><h3>抵港入住：机场打车直达木的地</h3><span class="tag red">已订航班</span></div>
+    <div class="route">
+      <div class="node start">香港国际机场<small>GK027 · 23:45 落地</small></div>
+      <div class="leg"><span class="ln">🧳 出关 + 取行李</span><span class="arw">→</span><span class="dt">约 00:30 出到到达层</span></div>
+      <div class="node">机场的士站<small>上车报地址：佐敦长乐街 1 号</small></div>
+      <div class="leg"><span class="ln">🚕 打车</span><span class="arw">→</span><span class="dt">约 31 公里 · 约 29 分钟 · 约 HK$290</span></div>
+      <div class="node">木的地酒店<small>约 01:00 到 · 24 小时前台入住</small></div>
+    </div>
+    <p class="small">这晚不排任何活动：洗漱休息，第二天中午才退房，睡够再出门。</p>
+    <div class="card">
+      <h3 style="margin-top:0">已订酒店：木的地酒店 Hotel Madera Hong Kong <span class="tag red">已订</span></h3>
+      <dl class="kv">
+        <dt>地址</dt><dd><strong>佐敦长乐街 1 号</strong>（佐敦站步行约 5 分钟）· <a href="https://www.trip.com/w/XzCNEZ9mGX2" target="_blank" rel="noopener">Trip.com 酒店页</a></dd>
+        <dt>入住 / 退房</dt><dd>12月19日晚入住（航班 23:45 落地，实际约 20日 01:00 到店）— 12月20日 <strong>12:00 退房</strong>，住 1 晚</dd>
+        <dt>前台</dt><dd><strong>24 小时前台</strong>，半夜到店可直接入住</dd>
+        <dt>房型</dt><dd><strong>豪华特大床房</strong>：1 张特大双人床，36 平方米，城景，禁烟，免费 Wi-Fi，17–22 楼</dd>
+        <dt>行李</dt><dd>退房后行李寄存在酒店，20日晚上回店取——评价里说入住前后都可暂放，入住时跟前台再确认一句</dd>
+        <dt>押金</dt><dd>每晚 HK$500，退房后约 14 天退回</dd>
+        <dt>价格</dt><dd>原价 <strong>AUD 530</strong>（1 晚）——<strong>已订</strong></dd>
+      </dl>
+      <p class="small" style="margin-bottom:0">为什么选它：房间比尖沙咀一带同价位大一圈，位置在市中心——庙街步行约 330 米、去尖沙咀海滨港铁 1 站、去西九龙站打车约 7 分钟，20日拍照和晚上赶高铁都顺路。</p>
+    </div>
+    
+
+    <div class="dayhead"><span class="d">12月20日 · 周日</span><h3>拍照日（白天）：退房寄行李 → 庙街 → 尖沙咀海滨 / 星光大道 → 西九文化区 → 日落</h3><span class="tag">行李寄酒店</span></div>
+    <img class="photo" src="assets/img-071.webp" alt="从尖沙咀海滨隔维多利亚港看香港岛天际线" loading="lazy" />
+    <div class="card">
+      <table>
+        <tr><th>12:00 前</th><td><strong>退房，行李寄存酒店。</strong>轻装出门，只带相机和证件——高铁票和过关都要用证件，护照/证件随身带。</td></tr>
+        <tr><th>12:00–13:00</th><td><strong>庙街 + 佐敦午饭：</strong>酒店步行约 330 米就是庙街，先在佐敦、庙街一带吃午饭、拍老街和招牌，节奏慢一点开场。</td></tr>
+        <tr><th>13:00–15:00</th><td><strong>尖沙咀海滨：</strong>佐敦站坐港铁 1 站到尖沙咀，海滨长廊 + 星光大道隔海拍港岛天际线，K11 Musea 外墙和海边顺路拍。</td></tr>
+        <tr><th>15:00–17:30</th><td><strong>西九文化区：</strong>沿海滨往西走（或打车约 10 分钟），M+ 和香港故宫文化博物馆的建筑外观 + 海滨草地，拍建筑和海景，这段离西九龙站最近。</td></tr>
+        <tr><th>17:30–18:30</th><td><strong>回尖沙咀海滨看日落：</strong>12月日落约 17:45，维港晚霞是全天最好拍的一段；顺便在尖沙咀吃晚饭。</td></tr>
+      </table>
+    </div>
+
+    <h3>拍照打卡点（站位 · 时间）</h3>
+    <div class="card" style="padding-top:4px;padding-bottom:4px">
+      <div class="spot"><h4><span class="n">01</span>庙街</h4>
+        <img class="spotimg" src="assets/img-072.jpg" alt="庙街夜市牌坊与摊档灯火" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>老香港夜市街 · 酒店出门第一站。</strong>牌坊、摊档、霓虹招牌和大排档挤在一条街上，是佐敦最有烟火气的一段。白天先拍街道和老招牌，气氛以市井感为主。</dd>
+        <dt>站位/朝向</dt><dd>站在庙街牌坊下朝街里拍摊档纵深，再贴边拍招牌和大排档近景。</dd>
+        <dt>最佳时间</dt><dd>中午开场顺路拍；这天晚上要赶高铁，不等夜市全亮。</dd>
+        <dt>去法</dt><dd>酒店步行约 330 米，约 5 分钟。</dd></dl></div>
+      <div class="spot"><h4><span class="n">02</span>尖沙咀海滨 · 星光大道</h4>
+        <img class="spotimg" src="assets/img-071.webp" alt="尖沙咀海滨长廊与对岸香港岛天际线" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>维港正景 · 全天的主画面。</strong>站在九龙这边隔海看香港岛整排天际线，海滨长廊和星光大道一路沿海，K11 Musea 就在旁边，外墙和海边台阶也好拍。</dd>
+        <dt>站位/朝向</dt><dd>站在海滨栏杆边朝南隔海拍港岛天际线全景；星光大道一段以海面和对岸高楼做背景拍人像。</dd>
+        <dt>最佳时间</dt><dd>下午拍蓝天版，<strong>17:45 前后日落</strong>拍晚霞版，一天两个时段都占上。</dd>
+        <dt>去法</dt><dd>佐敦站港铁 1 站到尖沙咀站，出站步行到海滨。</dd></dl></div>
+      <div class="spot"><h4><span class="n">03</span>西九文化区 · M+ / 故宫馆</h4>
+        <img class="spotimg" src="assets/img-073.jpg" alt="西九文化区M+大楼与海滨草地黄昏" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>新建筑群 · 海滨草地。</strong>M+ 的幕墙大楼和香港故宫文化博物馆立在海边，前面是大片草地和海滨长廊，建筑、海和草地同框，和尖沙咀的城市感完全不同。</dd>
+        <dt>站位/朝向</dt><dd>站在海滨草地和长廊上朝建筑拍外观全景，再回身拍海面和港岛方向。</dd>
+        <dt>最佳时间</dt><dd>下午到黄昏，光打在建筑立面上最柔和；这段离西九龙站最近，拍完正好往回程方向走。</dd>
+        <dt>去法</dt><dd>从尖沙咀沿海滨步行约 20–25 分钟，或打车约 10 分钟。</dd></dl></div>
+    </div>
+
+    <div class="dayhead"><span class="d">12月20日 · 周日晚上</span><h3>回深圳：取行李 → 打车去西九龙站 → 高铁到深圳福田</h3><span class="tag red">末班 23:00</span></div>
+    <div class="card">
+      <table>
+<tr><th>19:30</th><td><strong>回酒店取行李：</strong>港铁尖沙咀回佐敦 1 站，步行回木的地取寄存行李。</td></tr>
+        <tr><th>20:00</th><td><strong>打车去西九龙站：</strong>约 1.5 公里、约 7 分钟，带行李不步行。</td></tr>
+        <tr><th>20:30 左右</th><td><strong>到站过关候车：</strong>站内一地两检，提前 45–60 分钟到站正好。</td></tr>
+        <tr><th>21 点左右</th><td><strong>高铁去福田：</strong>14 分钟到深圳福田，换地铁去当晚住处。不用赶这一班——末班 23:00，但最晚 22:00 左右要到站，别玩过头。</td></tr>
+      </table>
+    </div>
+    <div class="card" style="padding-top:4px;padding-bottom:4px">
+      <div class="spot"><h4><span class="n">04</span>西九龙站 · 高铁回深圳</h4>
+        <img class="spotimg" src="assets/img-074.jpg" alt="香港西九龙站站台上的高铁列车" loading="lazy" />
+        <dl class="kv"><dt>介绍</dt><dd><strong>回程点 · 不是景点但值得记一笔。</strong>20:00 从酒店打车到站，站内一次过完两边关，上车 14 分钟就到福田——这趟香港段在这里收尾。</dd>
+        <dt>时间</dt><dd><strong>提前 45–60 分钟到站</strong>；末班 23:00，21 点左右的班次最从容。</dd>
+        <dt>费用</dt><dd>二等座 HK$75。</dd>
+        <dt>坑</dt><dd>高铁票要对证件，买票和进站都用同一本证件；别把到站时间压到发车前 20 分钟以内。</dd></dl></div>
+    </div>
+    </div>
+    <div class="warn"><strong>20日晚回深圳，只盯三个时间：</strong>19:30 回酒店取行李 → 20:00 打车出发 → 20:30 左右到西九龙站。日落拍到 18:30 就收，晚饭别排太远；万一晚了，高铁末班 23:00 是最后底线，22:00 前必须到站。</div>
+
+    <h3>打卡地图（放大版 · 分两张看）</h3>
+    <p class="sub" style="margin-bottom:4px">图1看全程位置：机场在最西边的大屿山，深圳在正北面，住和玩都在九龙南端。图2只放大九龙南端这一小片，酒店、西九龙站、佐敦站、庙街、尖沙咀海滨、西九文化区分开画，字大、不重叠。手机上每张图都可以左右滑动看全图。</p>
+    <div class="fig hkmap">
+      <p class="swipe">← 左右滑动看全图 →</p>
+      <svg viewBox="0 0 1000 560" role="img" aria-label="香港打卡地图图1：机场、九龙南端、西九龙站、木的地酒店与深圳福田的全程位置">
+        <rect x="0" y="0" width="1000" height="560" fill="#f5f1e6"/>
+        <text x="30" y="40" font-size="17" font-weight="700" fill="#1d2733">图1 · 全程位置（示意，非真实比例）</text>
+        <text x="918" y="40" text-anchor="end" font-size="16" font-weight="700" fill="#1d2733">N ↑ 北</text>
+        <g>
+          <rect x="600" y="64" width="360" height="84" rx="12" fill="#2e5f8a"/>
+          <text x="780" y="102" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">深圳 · 福田站</text>
+          <text x="780" y="130" text-anchor="middle" fill="#fff" font-size="15">到站换深圳地铁 2 / 3 / 11 号线</text>
+        </g>
+        <path d="M470,296 C560,222 640,176 726,150" fill="none" stroke="#b03a2e" stroke-width="5" stroke-dasharray="12 8"/>
+        <g>
+          <rect x="446" y="172" width="336" height="42" rx="21" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+          <text x="614" y="199" text-anchor="middle" font-size="16" font-weight="700" fill="#b03a2e">🚄 广深港高铁 · 14分钟 · HK$75</text>
+        </g>
+        <g>
+          <rect x="30" y="220" width="320" height="112" rx="12" fill="#fff" stroke="#1d2733" stroke-width="3"/>
+          <text x="190" y="264" text-anchor="middle" font-size="20" font-weight="700">✈ 香港国际机场</text>
+          <text x="190" y="292" text-anchor="middle" font-size="15" fill="#4c5a68">大屿山 · 19日 23:45 落地</text>
+          <text x="190" y="316" text-anchor="middle" font-size="15" fill="#4c5a68">出关拿行李约 00:30</text>
+        </g>
+        <path d="M350,292 C424,312 466,308 540,300" fill="none" stroke="#a87b1f" stroke-width="5" stroke-dasharray="12 8"/>
+        <g>
+          <rect x="286" y="348" width="380" height="42" rx="21" fill="#ffffff" stroke="#a87b1f" stroke-width="2.5"/>
+          <text x="476" y="375" text-anchor="middle" font-size="15.5" font-weight="700" fill="#7a5b12">🚕 打车约31km · 约29分钟 · 约HK$290</text>
+        </g>
+        <g>
+          <rect x="520" y="230" width="212" height="110" rx="12" fill="#fff" stroke="#b03a2e" stroke-width="3"/>
+          <text x="626" y="272" text-anchor="middle" font-size="19" font-weight="700">香港西九龙站</text>
+          <text x="626" y="300" text-anchor="middle" font-size="14.5" fill="#4c5a68">高铁站 · 站内一地两检</text>
+          <text x="626" y="322" text-anchor="middle" font-size="14.5" fill="#4c5a68">20日晚从这里回深圳</text>
+        </g>
+        <g>
+          <rect x="748" y="230" width="222" height="110" rx="12" fill="#b03a2e"/>
+          <text x="859" y="272" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">★ 木的地酒店</text>
+          <text x="859" y="300" text-anchor="middle" fill="#fff" font-size="14.5">佐敦长乐街 1 号</text>
+          <text x="859" y="322" text-anchor="middle" fill="#fff" font-size="14.5">24小时前台 · 行李寄存</text>
+        </g>
+        <g>
+          <rect x="520" y="400" width="450" height="38" rx="10" fill="#eef3e8"/>
+          <text x="745" y="425" text-anchor="middle" font-size="15" fill="#1d2733">尖沙咀海滨 · 西九文化区在南边海边 → 看图2放大</text>
+        </g>
+        <rect x="0" y="452" width="1000" height="50" fill="#a9cde3"/>
+        <text x="30" y="484" font-size="16" font-weight="700" fill="#2e5f8a">维多利亚港</text>
+        <g fill="#c9cfd6">
+          <rect x="120" y="516" width="34" height="30"/><rect x="162" y="510" width="26" height="36"/>
+          <rect x="196" y="520" width="40" height="26"/><rect x="244" y="508" width="30" height="38"/>
+          <rect x="282" y="518" width="36" height="28"/><rect x="640" y="514" width="34" height="32"/>
+          <rect x="682" y="520" width="40" height="26"/>
+        </g>
+        <text x="330" y="538" font-size="14.5" fill="#4c5a68">香港岛 · 中环天际线（尖沙咀海滨隔海要拍的主景）</text>
+      </svg>
+      <p class="figcap">读法：酒店是圆心，西九龙站在酒店西边，深圳在正北面、高铁一站直达；机场单独在西边的大屿山，所以 19 日半夜落地只打车、不折腾转车。九龙南端每个点的位置看图2。</p>
+    </div>
+    <div class="fig hkmap">
+      <p class="swipe">← 左右滑动看全图 →</p>
+      <svg viewBox="0 0 1000 720" role="img" aria-label="香港打卡地图图2：九龙南端放大，木的地酒店、庙街、佐敦站、西九龙站、西九文化区与尖沙咀海滨的位置">
+        <rect x="0" y="0" width="1000" height="720" fill="#f5f1e6"/>
+        <text x="30" y="40" font-size="17" font-weight="700" fill="#1d2733">图2 · 九龙南端放大（示意，非真实比例）：全在酒店步行 + 港铁 1 站内</text>
+        <g>
+          <rect x="560" y="60" width="400" height="92" rx="12" fill="#fff" stroke="#a87b1f" stroke-width="3"/>
+          <text x="760" y="100" text-anchor="middle" font-size="21" font-weight="700">庙街夜市</text>
+          <text x="760" y="130" text-anchor="middle" font-size="15" fill="#4c5a68">酒店步行约330m · 约5分钟</text>
+        </g>
+        <line x1="760" y1="152" x2="760" y2="190" stroke="#4c5a68" stroke-width="3" stroke-dasharray="5 5"/>
+        <g>
+          <rect x="40" y="190" width="420" height="118" rx="12" fill="#fff" stroke="#b03a2e" stroke-width="3"/>
+          <text x="250" y="234" text-anchor="middle" font-size="21" font-weight="700">香港西九龙站</text>
+          <text x="250" y="264" text-anchor="middle" font-size="15" fill="#4c5a68">高铁站 · 站内一地两检</text>
+          <text x="250" y="290" text-anchor="middle" font-size="15" fill="#4c5a68">20日晚从这里坐高铁回深圳福田</text>
+        </g>
+        <g>
+          <rect x="540" y="190" width="420" height="118" rx="12" fill="#b03a2e"/>
+          <text x="750" y="234" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">★ 木的地酒店（住这里）</text>
+          <text x="750" y="264" text-anchor="middle" fill="#fff" font-size="15">佐敦长乐街 1 号 · 24 小时前台</text>
+          <text x="750" y="290" text-anchor="middle" fill="#fff" font-size="15">20日 12:00 退房 · 行李寄存，晚上回店取</text>
+        </g>
+        <g>
+          <rect x="180" y="330" width="640" height="46" rx="23" fill="#ffffff" stroke="#4c5a68" stroke-width="2.5"/>
+          <text x="500" y="359" text-anchor="middle" font-size="16" font-weight="700" fill="#1d2733">酒店 → 西九龙站：打车约7分钟（1.5km）· 步行约22分钟，带行李别走</text>
+        </g>
+        <line x1="760" y1="376" x2="760" y2="420" stroke="#4c5a68" stroke-width="3" stroke-dasharray="5 5"/>
+        <g>
+          <rect x="40" y="420" width="420" height="92" rx="12" fill="#fff" stroke="#2e5f8a" stroke-width="3"/>
+          <text x="250" y="460" text-anchor="middle" font-size="20" font-weight="700">西九文化区 · M+ / 故宫馆</text>
+          <text x="250" y="490" text-anchor="middle" font-size="15" fill="#4c5a68">海滨草地 · 拍建筑 + 海景</text>
+        </g>
+        <g>
+          <rect x="560" y="420" width="400" height="92" rx="12" fill="#fff" stroke="#1d2733" stroke-width="3"/>
+          <text x="760" y="460" text-anchor="middle" font-size="20" font-weight="700">佐敦站（港铁荃湾线）</text>
+          <text x="760" y="490" text-anchor="middle" font-size="15" fill="#4c5a68">酒店步行约5分钟</text>
+        </g>
+        <text x="250" y="548" text-anchor="middle" font-size="14.5" fill="#4c5a68">西九文化区 ↔ 尖沙咀：沿海滨步行约20–25分钟 · 打车约10分钟</text>
+        <g>
+          <rect x="566" y="524" width="388" height="42" rx="21" fill="#ffffff" stroke="#1d2733" stroke-width="2.5"/>
+          <text x="760" y="551" text-anchor="middle" font-size="16" font-weight="700" fill="#1d2733">佐敦站 → 尖沙咀站：港铁 1 站 · 约5分钟</text>
+        </g>
+        <line x1="760" y1="566" x2="760" y2="580" stroke="#4c5a68" stroke-width="3" stroke-dasharray="5 5"/>
+        <g>
+          <rect x="520" y="580" width="440" height="100" rx="12" fill="#fff" stroke="#2e5f8a" stroke-width="3"/>
+          <text x="740" y="620" text-anchor="middle" font-size="19" font-weight="700">尖沙咀海滨 · 星光大道 · K11 Musea</text>
+          <text x="740" y="650" text-anchor="middle" font-size="15" fill="#4c5a68">隔海拍港岛天际线 · 日落约17:45</text>
+        </g>
+        <text x="250" y="606" text-anchor="middle" font-size="14.5" fill="#4c5a68">西九文化区就在西九龙站南侧海边，</text>
+        <text x="250" y="630" text-anchor="middle" font-size="14.5" fill="#4c5a68">拍完往尖沙咀方向沿海滨走就是海滨长廊</text>
+        <rect x="0" y="692" width="1000" height="28" fill="#a9cde3"/>
+        <text x="30" y="712" font-size="14" font-weight="700" fill="#2e5f8a">维多利亚港（南）</text>
+      </svg>
+      <p class="figcap">读法：酒店往北 5 分钟是庙街，往南到佐敦站坐港铁 1 站是尖沙咀海滨；酒店往西打车约 7 分钟是西九龙站，西九文化区在车站南侧海边，和尖沙咀海滨沿海相连。</p>
+    </div>
+    
+    <h3>交通方法（一表看全）</h3>
+    <div class="card">
+      <table>
+        <tr><th>路段</th><th>走法</th><th>时间 / 费用</th></tr>
+        <tr><td><strong>香港机场 → 木的地</strong>（19日深夜）</td><td><strong>打车直达</strong>，佐敦长乐街 1 号。出关约 00:30，这个点机场快线班次疏、还要转一次车，不如打车到门口下车就入住。</td><td>约 31 公里 · 约 29 分钟 · 约 HK$290</td></tr>
+        <tr><td><strong>酒店 → 庙街</strong></td><td>步行，沿佐敦一带街道往北走。</td><td>约 330 米 · 约 5 分钟</td></tr>
+        <tr><td><strong>酒店 → 尖沙咀海滨</strong></td><td>步行约 5 分钟到佐敦站，港铁荃湾线 1 站到尖沙咀站，出站步行到海滨长廊；也可以沿弥敦道一路步行约 20 分钟，边走边拍。</td><td>港铁 1 站 · 约 5 分钟车程</td></tr>
+        <tr><td><strong>尖沙咀 → 西九文化区</strong></td><td>沿海滨长廊往西步行，或打车过去。</td><td>步行约 20–25 分钟 / 打车约 10 分钟</td></tr>
+        <tr><td><strong>酒店 → 西九龙站</strong>（20日晚，带行李）</td><td><strong>打车</strong>。带行李不要步行（约 22 分钟）。</td><td>约 1.5 公里 · 约 7 分钟</td></tr>
+        <tr><td><strong>西九龙站 → 深圳福田</strong></td><td><strong>广深港高铁</strong>。站内一次办完香港出境和内地入境（一地两检），不用下车再排队；到福田站直接换深圳地铁 2 / 3 / 11 号线。</td><td><strong>14 分钟 · HK$75（二等座）</strong> · 班次密，末班 23:00</td></tr>
+      </table>
+      <p class="small" style="margin-bottom:0">回深圳为什么只推西九龙高铁：去罗湖要坐约 50 分钟港铁到口岸再排队过关，全程 1.5 小时起；去深圳湾、黄岗都要打车到口岸再换车。西九龙是离酒店最近、总时间最短的一条。</p>
+    </div>
+  </section>
+
+  <footer>澳门 + 东京 + 香港行程 · 2026年12月9–20日 · Edwyn + 大莉 · 11–17日 Tora Hotel Ikebukuro（3-41-3 Ikebukuro, Toshima City, Tokyo）· 17–19日酒店未定 · 19–20日 香港木的地酒店（佐敦长乐街 1 号）→ 西九龙高铁回深圳福田</footer>
+</div>
+<script>
+(function(){
+  var nav = document.querySelector('nav.toc');
+  if(!nav) return;
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+  var byId = {};
+  links.forEach(function(a){ byId[a.getAttribute('href').slice(1)] = a; });
+  var current = null;
+  function setHot(id, scrollNav){
+    var a = byId[id];
+    if(!a || a === current) return;
+    links.forEach(function(x){ x.classList.remove('hot'); });
+    a.classList.add('hot');
+    current = a;
+    if(scrollNav){
+      var target = a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2;
+      nav.scrollTo({left: Math.max(0, target), behavior: 'smooth'});
+    }
+  }
+  /* tap a menu item: highlight it right away */
+  links.forEach(function(a){
+    a.addEventListener('click', function(){ setHot(a.getAttribute('href').slice(1), false); });
+  });
+  /* scrolling: highlight the section currently on screen */
+  var sections = links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); })
+                      .filter(function(s){ return !!s; });
+  if('IntersectionObserver' in window && sections.length){
+    var visible = {};
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ visible[e.target.id] = e.isIntersecting; });
+      for(var i = 0; i < sections.length; i++){
+        if(visible[sections[i].id]){ setHot(sections[i].id, true); break; }
+      }
+    }, {rootMargin: '-72px 0px -55% 0px', threshold: 0});
+    sections.forEach(function(s){ io.observe(s); });
+  }
+  /* opening with a #hash in the address: highlight that menu item */
+  if(location.hash && byId[location.hash.slice(1)]) setHot(location.hash.slice(1), true);
+})();
+</script>
+</body>
+</html>
